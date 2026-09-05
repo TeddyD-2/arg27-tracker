@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.local
+
+# Superseded by "ARG27 - Goals, Milestones, Tasks, and Timeline.xlsx";
+# nothing reads it any more.
+ARG27 - Goals, Milestones, and Tasks.xlsx
+
+.DS_Store

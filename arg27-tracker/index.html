@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" style="color-scheme: dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0c0f" />
+
+    <!-- Proxima Nova is the brand face but is not free to serve; Mulish is the
+         stand-in for anyone without it. Swap in the team's Adobe Fonts kit here
+         to get the real thing for every visitor. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./cornell-racing.webp" />
+
+    <title>ARG27 Program Tracker · Cornell Racing</title>
+    <meta
+      name="description"
+      content="Goals, milestones and tasks for every Cornell Racing ARG27 subteam, imported from the season workbook and rolled up automatically."
+    />
+
+    <!-- og:image must be an absolute URL for link unfurlers to fetch it.
+         Change ./og.png to https://<host>/og.png when this is deployed. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ARG27 Program Tracker" />
+    <meta
+      property="og:description"
+      content="Goals, milestones and tasks for every Cornell Racing ARG27 subteam, imported from the season workbook and rolled up automatically."
+    />
+    <meta property="og:image" content="./og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- First paint. The app bundle replaces this on mount, so the window is
+         never an empty plane while the JavaScript parses. -->
+    <style>
+      #boot {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0a0c0f;
+        color: #737c88;
+        font:
+          500 13px/1.4 'Proxima Nova',
+          'proxima-nova',
+          Mulish,
+          system-ui,
+          -apple-system,
+          'Segoe UI',
+          sans-serif;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        #boot {
+          animation: boot-in 0.4s ease-out 0.2s both;
+        }
+        @keyframes boot-in {
+          from {
+            opacity: 0;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="boot">Loading ARG27</div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

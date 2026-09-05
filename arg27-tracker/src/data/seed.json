@@ -1,0 +1,5735 @@
+{
+ "meta": {
+  "source": "ARG27 - Goals, Milestones, Tasks, and Timeline.xlsx",
+  "generated": true,
+  "seasonStart": "2026-07-01",
+  "seasonEnd": "2027-07-01",
+  "competition": "2027-06-16"
+ },
+ "subteams": [
+  {
+   "code": "GE",
+   "name": "General"
+  },
+  {
+   "code": "CH",
+   "name": "Chassis"
+  },
+  {
+   "code": "PT",
+   "name": "Powertrain"
+  },
+  {
+   "code": "HV",
+   "name": "High Voltage"
+  },
+  {
+   "code": "LV",
+   "name": "Low Voltage"
+  },
+  {
+   "code": "CO",
+   "name": "Cooling"
+  },
+  {
+   "code": "FW",
+   "name": "Firmware"
+  },
+  {
+   "code": "AU",
+   "name": "Autonomy"
+  },
+  {
+   "code": "AE",
+   "name": "Aerodynamics"
+  },
+  {
+   "code": "ER",
+   "name": "Ergonomics"
+  },
+  {
+   "code": "MO",
+   "name": "Monocoque"
+  },
+  {
+   "code": "SU",
+   "name": "Suspension"
+  },
+  {
+   "code": "BU",
+   "name": "Business"
+  }
+ ],
+ "assemblies": [
+  {
+   "subteam": "General",
+   "code": "A00",
+   "name": "General"
+  },
+  {
+   "subteam": "General",
+   "code": "A01",
+   "name": "Chassis"
+  },
+  {
+   "subteam": "General",
+   "code": "A02",
+   "name": "Powertrain"
+  },
+  {
+   "subteam": "High Voltage",
+   "code": "A01",
+   "name": "High Voltage"
+  },
+  {
+   "subteam": "High Voltage",
+   "code": "A02",
+   "name": "Modules"
+  },
+  {
+   "subteam": "High Voltage",
+   "code": "A03",
+   "name": "Case"
+  },
+  {
+   "subteam": "High Voltage",
+   "code": "A04",
+   "name": "Accumulator Electronics"
+  },
+  {
+   "subteam": "High Voltage",
+   "code": "A05",
+   "name": "Inverter Enclosure"
+  },
+  {
+   "subteam": "High Voltage",
+   "code": "A06",
+   "name": "Powerhouse"
+  },
+  {
+   "subteam": "High Voltage",
+   "code": "A07",
+   "name": "Control Panel"
+  },
+  {
+   "subteam": "High Voltage",
+   "code": "A08",
+   "name": "RTML and TSSI"
+  },
+  {
+   "subteam": "High Voltage",
+   "code": "A09",
+   "name": "Other High Voltage"
+  },
+  {
+   "subteam": "Low Voltage",
+   "code": "A01",
+   "name": "Low Voltage"
+  },
+  {
+   "subteam": "Low Voltage",
+   "code": "A02",
+   "name": "Harness"
+  },
+  {
+   "subteam": "Low Voltage",
+   "code": "A03",
+   "name": "ECU"
+  },
+  {
+   "subteam": "Low Voltage",
+   "code": "A04",
+   "name": "BMS Child"
+  },
+  {
+   "subteam": "Low Voltage",
+   "code": "A05",
+   "name": "ACU"
+  },
+  {
+   "subteam": "Low Voltage",
+   "code": "A06",
+   "name": "Shutdown"
+  },
+  {
+   "subteam": "Low Voltage",
+   "code": "A07",
+   "name": "Discharge"
+  },
+  {
+   "subteam": "Low Voltage",
+   "code": "A08",
+   "name": "PDU"
+  },
+  {
+   "subteam": "Low Voltage",
+   "code": "A09",
+   "name": "Dash"
+  },
+  {
+   "subteam": "Low Voltage",
+   "code": "A10",
+   "name": "Other Low Voltage"
+  },
+  {
+   "subteam": "Cooling",
+   "code": "A01",
+   "name": "Cooling"
+  },
+  {
+   "subteam": "Cooling",
+   "code": "A02",
+   "name": "Liquid Loop"
+  },
+  {
+   "subteam": "Cooling",
+   "code": "A03",
+   "name": "Cooling Sleeve"
+  },
+  {
+   "subteam": "Cooling",
+   "code": "A04",
+   "name": "Accumulator Cooling"
+  },
+  {
+   "subteam": "Cooling",
+   "code": "A05",
+   "name": "Other Cooling"
+  },
+  {
+   "subteam": "Firmware",
+   "code": "A01",
+   "name": "Firmware"
+  },
+  {
+   "subteam": "Firmware",
+   "code": "A02",
+   "name": "BMS Code"
+  },
+  {
+   "subteam": "Firmware",
+   "code": "A03",
+   "name": "ECU Code"
+  },
+  {
+   "subteam": "Firmware",
+   "code": "A04",
+   "name": "Active VD Controls"
+  },
+  {
+   "subteam": "Firmware",
+   "code": "A05",
+   "name": "Dash Firmware"
+  },
+  {
+   "subteam": "Firmware",
+   "code": "A06",
+   "name": "Other Firmware"
+  },
+  {
+   "subteam": "Autonomy",
+   "code": "A01",
+   "name": "Autonomy"
+  },
+  {
+   "subteam": "Autonomy",
+   "code": "A02",
+   "name": "Autonomy Mechanical"
+  },
+  {
+   "subteam": "Autonomy",
+   "code": "A03",
+   "name": "Path Planning and Following"
+  },
+  {
+   "subteam": "Autonomy",
+   "code": "A04",
+   "name": "Sensors and Harnessing"
+  },
+  {
+   "subteam": "Autonomy",
+   "code": "A05",
+   "name": "Compute and Hardware"
+  },
+  {
+   "subteam": "Autonomy",
+   "code": "A06",
+   "name": "Perception and Data Interface"
+  },
+  {
+   "subteam": "Autonomy",
+   "code": "A07",
+   "name": "Software Pipeline"
+  },
+  {
+   "subteam": "Autonomy",
+   "code": "A08",
+   "name": "Other Autonomy"
+  },
+  {
+   "subteam": "Aerodynamics",
+   "code": "A01",
+   "name": "Aerodynamics"
+  },
+  {
+   "subteam": "Aerodynamics",
+   "code": "A02",
+   "name": "Front Wing"
+  },
+  {
+   "subteam": "Aerodynamics",
+   "code": "A03",
+   "name": "Rear Wing"
+  },
+  {
+   "subteam": "Aerodynamics",
+   "code": "A04",
+   "name": "Undertray"
+  },
+  {
+   "subteam": "Aerodynamics",
+   "code": "A05",
+   "name": "Auxiliary Elements"
+  },
+  {
+   "subteam": "Aerodynamics",
+   "code": "A06",
+   "name": "Sidepod"
+  },
+  {
+   "subteam": "Aerodynamics",
+   "code": "A07",
+   "name": "CFD"
+  },
+  {
+   "subteam": "Aerodynamics",
+   "code": "A08",
+   "name": "Other Aerodynamics"
+  },
+  {
+   "subteam": "Ergonomics",
+   "code": "A01",
+   "name": "Ergonomics"
+  },
+  {
+   "subteam": "Ergonomics",
+   "code": "A02",
+   "name": "Steering"
+  },
+  {
+   "subteam": "Ergonomics",
+   "code": "A03",
+   "name": "Pedals"
+  },
+  {
+   "subteam": "Ergonomics",
+   "code": "A04",
+   "name": "Seat"
+  },
+  {
+   "subteam": "Ergonomics",
+   "code": "A05",
+   "name": "Firewall"
+  },
+  {
+   "subteam": "Ergonomics",
+   "code": "A06",
+   "name": "Head Restraint"
+  },
+  {
+   "subteam": "Ergonomics",
+   "code": "A07",
+   "name": "Steering Wheel"
+  },
+  {
+   "subteam": "Ergonomics",
+   "code": "A08",
+   "name": "Other Ergonomics"
+  },
+  {
+   "subteam": "Monocoque",
+   "code": "A01",
+   "name": "Monocoque"
+  },
+  {
+   "subteam": "Monocoque",
+   "code": "A02",
+   "name": "MO Geometry"
+  },
+  {
+   "subteam": "Monocoque",
+   "code": "A03",
+   "name": "Protective Structures"
+  },
+  {
+   "subteam": "Monocoque",
+   "code": "A05",
+   "name": "SES and Ply Schedules"
+  },
+  {
+   "subteam": "Monocoque",
+   "code": "A06",
+   "name": "Other Monocoque"
+  },
+  {
+   "subteam": "Suspension",
+   "code": "A01",
+   "name": "Suspension"
+  },
+  {
+   "subteam": "Suspension",
+   "code": "A02",
+   "name": "Links"
+  },
+  {
+   "subteam": "Suspension",
+   "code": "A03",
+   "name": "Clevises"
+  },
+  {
+   "subteam": "Suspension",
+   "code": "A04",
+   "name": "Rockers"
+  },
+  {
+   "subteam": "Suspension",
+   "code": "A05",
+   "name": "Anti-Roll"
+  },
+  {
+   "subteam": "Suspension",
+   "code": "A08",
+   "name": "Jig Plate"
+  },
+  {
+   "subteam": "Suspension",
+   "code": "A09",
+   "name": "Other Suspension"
+  },
+  {
+   "subteam": "Unsprung",
+   "code": "A01",
+   "name": "Unsprung"
+  },
+  {
+   "subteam": "Unsprung",
+   "code": "A02",
+   "name": "Hubs and Uprights"
+  },
+  {
+   "subteam": "Unsprung",
+   "code": "A03",
+   "name": "Brakes"
+  },
+  {
+   "subteam": "Unsprung",
+   "code": "A04",
+   "name": "Gearbox"
+  },
+  {
+   "subteam": "Unsprung",
+   "code": "A05",
+   "name": "Other Unsprung"
+  },
+  {
+   "subteam": "Business",
+   "code": "A01",
+   "name": "Business"
+  },
+  {
+   "subteam": "Business",
+   "code": "A02",
+   "name": "Purchasing"
+  },
+  {
+   "subteam": "Business",
+   "code": "A03",
+   "name": "Recruitment"
+  },
+  {
+   "subteam": "Business",
+   "code": "A04",
+   "name": "Business Presentations"
+  },
+  {
+   "subteam": "Business",
+   "code": "A05",
+   "name": "Fundraising, Sponsors"
+  },
+  {
+   "subteam": "Business",
+   "code": "A06",
+   "name": "Website"
+  },
+  {
+   "subteam": "Business",
+   "code": "A07",
+   "name": "Social Media"
+  },
+  {
+   "subteam": "Business",
+   "code": "A08",
+   "name": "Merch"
+  },
+  {
+   "subteam": "Business",
+   "code": "A09",
+   "name": "Other Business"
+  }
+ ],
+ "goals": [
+  {
+   "id": "GE_G001",
+   "sheetId": "GE_M001",
+   "subteam": "General",
+   "title": "Win Endurance",
+   "status": "On Track",
+   "successMetric": "Get Lapsim data on needed power limit, regen strategy",
+   "notes": ""
+  },
+  {
+   "id": "GE_G002",
+   "sheetId": "GE_M002",
+   "subteam": "General",
+   "title": "Win Design",
+   "status": "On Track",
+   "successMetric": "",
+   "notes": ""
+  },
+  {
+   "id": "GE_G003",
+   "sheetId": "GE_M003",
+   "subteam": "General",
+   "title": "Win Cost",
+   "status": "On Track",
+   "successMetric": "",
+   "notes": ""
+  },
+  {
+   "id": "GE_G004",
+   "sheetId": "GE_M004",
+   "subteam": "General",
+   "title": "Win Presentation",
+   "status": "On Track",
+   "successMetric": "",
+   "notes": ""
+  },
+  {
+   "id": "GE_G005",
+   "sheetId": "GE_M005",
+   "subteam": "General",
+   "title": "Stay Competitive in all events",
+   "status": "On Track",
+   "successMetric": "",
+   "notes": ""
+  },
+  {
+   "id": "CH_G001",
+   "sheetId": "CH_M001",
+   "subteam": "Chassis",
+   "title": "Reliable Car",
+   "status": "Delayed",
+   "successMetric": "Elaborate",
+   "notes": ""
+  },
+  {
+   "id": "CH_G002",
+   "sheetId": "CH_M002",
+   "subteam": "Chassis",
+   "title": "380 LB Car",
+   "status": "Delayed",
+   "successMetric": "Need Lapsim data on this",
+   "notes": ""
+  },
+  {
+   "id": "PT_G001",
+   "sheetId": "PT_M001",
+   "subteam": "Powertrain",
+   "title": "Proper Mounting + Integration",
+   "status": "On Track",
+   "successMetric": "Robust with a consistent safety factor, no tapes,",
+   "notes": ""
+  },
+  {
+   "id": "HV_G001",
+   "sheetId": "HV_M001",
+   "subteam": "High Voltage",
+   "title": "90lb pack",
+   "status": "On Track",
+   "successMetric": "",
+   "notes": ""
+  },
+  {
+   "id": "LV_G001",
+   "sheetId": "LV_M001",
+   "subteam": "Low Voltage",
+   "title": "Commonized components",
+   "status": "On Track",
+   "successMetric": "Altium library created and integrated into all PCB designs",
+   "notes": ""
+  },
+  {
+   "id": "AU_G001",
+   "sheetId": "AU_M001",
+   "subteam": "Autonomy",
+   "title": "Complete Full Trackdrive",
+   "status": "On Track",
+   "successMetric": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_G002",
+   "sheetId": "AU_M002",
+   "subteam": "Autonomy",
+   "title": "System that can support human driving speeds",
+   "status": "On Track",
+   "successMetric": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_G003",
+   "sheetId": "AU_M003",
+   "subteam": "Autonomy",
+   "title": "Seamless integration with ARG26 & safety-compliant",
+   "status": "On Track",
+   "successMetric": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_G001",
+   "sheetId": "ER_M001",
+   "subteam": "Ergonomics",
+   "title": "Full Working/Rules Compliant Sensor Package",
+   "status": "On Track",
+   "successMetric": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_G002",
+   "sheetId": "ER_M002",
+   "subteam": "Ergonomics",
+   "title": "Accurately redefine driver load cases across all parts",
+   "status": "On Track",
+   "successMetric": "Have the Data to backup our load cases, hasn't been done in years.",
+   "notes": ""
+  },
+  {
+   "id": "MO_G001",
+   "sheetId": "MO_M001",
+   "subteam": "Monocoque",
+   "title": "40lb Tub",
+   "status": "On Track",
+   "successMetric": "",
+   "notes": ""
+  },
+  {
+   "id": "MO_G002",
+   "sheetId": "MO_M002",
+   "subteam": "Monocoque",
+   "title": "Testing: 95% of Elastic Modulus of Steel",
+   "status": "On Track",
+   "successMetric": "",
+   "notes": ""
+  }
+ ],
+ "milestones": [
+  {
+   "id": "GE_M001",
+   "subteam": "General",
+   "title": "First Drive",
+   "start": "",
+   "due": "2027-02-07",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "GE_M002",
+   "subteam": "General",
+   "title": "SDR",
+   "start": "",
+   "due": "2026-08-16",
+   "status": "Complete",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "GE_M003",
+   "subteam": "General",
+   "title": "System PDR",
+   "start": "",
+   "due": "2026-09-14",
+   "status": "In Progress",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "System Level Targets, reviewed by Alumni"
+  },
+  {
+   "id": "GE_M004",
+   "subteam": "General",
+   "title": "PDR",
+   "start": "",
+   "due": "2026-09-28",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "GE_M005",
+   "subteam": "General",
+   "title": "ADR",
+   "start": "",
+   "due": "2026-10-25",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "GE_M006",
+   "subteam": "General",
+   "title": "FDR",
+   "start": "",
+   "due": "2026-11-25",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "GE_M007",
+   "subteam": "General",
+   "title": "CAD Freeze",
+   "start": "",
+   "due": "2026-10-22",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "GE_M008",
+   "subteam": "General",
+   "title": "Rules Released",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "GE_M009",
+   "subteam": "General",
+   "title": "Finalize Drivers",
+   "start": "",
+   "due": "",
+   "status": "In Progress",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "GE_M010",
+   "subteam": "General",
+   "title": "ARG26 First Drive",
+   "start": "",
+   "due": "2026-09-05",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "GE_M011",
+   "subteam": "General",
+   "title": "ARG27 Second Drive",
+   "start": "",
+   "due": "2027-03-14",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "GE_M012",
+   "subteam": "General",
+   "title": "Fully rules compliant car",
+   "start": "",
+   "due": "2027-04-01",
+   "status": "Blocked",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "GE_M013",
+   "subteam": "General",
+   "title": "Autolab Clean Up",
+   "start": "",
+   "due": "",
+   "status": "",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "CH_M001",
+   "subteam": "Chassis",
+   "title": "Chassis Drop",
+   "start": "",
+   "due": "2027-01-25",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "CH_M002",
+   "subteam": "Chassis",
+   "title": "Dynamic Cad done",
+   "start": "",
+   "due": "2026-10-19",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "PT_M001",
+   "subteam": "Powertrain",
+   "title": "Powertrain Off Car Drop",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "PT_M002",
+   "subteam": "Powertrain",
+   "title": "Order DTI Motors + Inverters",
+   "start": "",
+   "due": "2026-08-01",
+   "status": "Blocked",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "PT_M003",
+   "subteam": "Powertrain",
+   "title": "Motor Spin",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "PT_M004",
+   "subteam": "Powertrain",
+   "title": "Motor Spin on Car",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "PT_M005",
+   "subteam": "Powertrain",
+   "title": "Steady State Powertrain",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "HV_M001",
+   "subteam": "High Voltage",
+   "title": "Order pouch cells",
+   "start": "",
+   "due": "2026-08-30",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "HV_M002",
+   "subteam": "High Voltage",
+   "title": "Order fireproof composite material",
+   "start": "",
+   "due": "2026-08-18",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "HV_M003",
+   "subteam": "High Voltage",
+   "title": "Module parts manufactured and QCed",
+   "start": "",
+   "due": "2026-12-01",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "HV_M004",
+   "subteam": "High Voltage",
+   "title": "Composite case manufactured",
+   "start": "",
+   "due": "2026-12-01",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "HV_M005",
+   "subteam": "High Voltage",
+   "title": "Acc electronics components finalized (busbars inclusive)",
+   "start": "",
+   "due": "2026-09-21",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "HV_M006",
+   "subteam": "High Voltage",
+   "title": "Finalize composite TB container ply schedule per SES",
+   "start": "",
+   "due": "2026-10-01",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "HV_M007",
+   "subteam": "High Voltage",
+   "title": "Tractive Battery electrical architechture finalized",
+   "start": "",
+   "due": "2026-08-26",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "HV_M008",
+   "subteam": "High Voltage",
+   "title": "Laser Welder Installed in Autolab",
+   "start": "",
+   "due": "2026-09-01",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "HV_M009",
+   "subteam": "High Voltage",
+   "title": "Tractive Battery + Inverter Packaging finalized",
+   "start": "",
+   "due": "2026-09-15",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "HV_M010",
+   "subteam": "High Voltage",
+   "title": "Pack active cooling math finalized",
+   "start": "",
+   "due": "2026-09-01",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "HV_M011",
+   "subteam": "High Voltage",
+   "title": "Module Discharge Rig Assembled",
+   "start": "",
+   "due": "2026-09-07",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "HV_M012",
+   "subteam": "High Voltage",
+   "title": "Active cooling validated with module discharge rig",
+   "start": "",
+   "due": "2026-09-09",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "HV_M013",
+   "subteam": "High Voltage",
+   "title": "Tractive Battery Modules + Container SES done",
+   "start": "",
+   "due": "2026-11-01",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "LV_M001",
+   "subteam": "Low Voltage",
+   "title": "Altium library groundwork finished",
+   "start": "",
+   "due": "",
+   "status": "In Progress",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "LV_M002",
+   "subteam": "Low Voltage",
+   "title": "First revs schematics done",
+   "start": "",
+   "due": "2026-08-17",
+   "status": "In Progress",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "LV_M003",
+   "subteam": "Low Voltage",
+   "title": "First revs layout done",
+   "start": "",
+   "due": "2026-09-09",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "LV_M004",
+   "subteam": "Low Voltage",
+   "title": "First revs ordered",
+   "start": "",
+   "due": "2026-09-10",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "LV_M005",
+   "subteam": "Low Voltage",
+   "title": "First revs tested",
+   "start": "",
+   "due": "2026-09-28",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "PDR"
+  },
+  {
+   "id": "LV_M006",
+   "subteam": "Low Voltage",
+   "title": "Precharge tested in loop",
+   "start": "",
+   "due": "2027-01-07",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "LV_M007",
+   "subteam": "Low Voltage",
+   "title": "BMS Children LV/HV tested",
+   "start": "",
+   "due": "2027-01-08",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "LV_M008",
+   "subteam": "Low Voltage",
+   "title": "BMS Children integrated onto modules",
+   "start": "",
+   "due": "2027-01-09",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "LV_M009",
+   "subteam": "Low Voltage",
+   "title": "Shutdown circuit closed",
+   "start": "",
+   "due": "2027-01-15",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "LV_M010",
+   "subteam": "Low Voltage",
+   "title": "LV Harness ICDs finished",
+   "start": "",
+   "due": "2026-10-11",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "LV_M011",
+   "subteam": "Low Voltage",
+   "title": "Enclosures finalized",
+   "start": "",
+   "due": "2026-10-22",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "depends on cad freeze?"
+  },
+  {
+   "id": "LV_M012",
+   "subteam": "Low Voltage",
+   "title": "Power budget estimated",
+   "start": "",
+   "due": "2026-10-01",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "LV_M013",
+   "subteam": "Low Voltage",
+   "title": "LV Harness Sensors finalized",
+   "start": "",
+   "due": "2026-10-11",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "CO_M001",
+   "subteam": "Cooling",
+   "title": "Liquid Loop Assembled on Bench",
+   "start": "",
+   "due": "2027-01-15",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "CO_M002",
+   "subteam": "Cooling",
+   "title": "Liquid Loop Bled on Car",
+   "start": "",
+   "due": "2027-01-26",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "CO_M003",
+   "subteam": "Cooling",
+   "title": "Final Loop Test",
+   "start": "",
+   "due": "2027-01-20",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "CO_M004",
+   "subteam": "Cooling",
+   "title": "Final Designs Manufactured",
+   "start": "",
+   "due": "2027-01-13",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "CO_M005",
+   "subteam": "Cooling",
+   "title": "Final Designs Completed",
+   "start": "",
+   "due": "2026-12-11",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "CO_M006",
+   "subteam": "Cooling",
+   "title": "Full Prototype Loop Test",
+   "start": "",
+   "due": "2026-10-17",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "CO_M007",
+   "subteam": "Cooling",
+   "title": "Full Prototype Manufactured",
+   "start": "",
+   "due": "2026-10-10",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "CO_M008",
+   "subteam": "Cooling",
+   "title": "Full Prototype Designs Completed",
+   "start": "",
+   "due": "2026-09-26",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "CO_M009",
+   "subteam": "Cooling",
+   "title": "Cooling Power Requirements",
+   "start": "",
+   "due": "2026-09-19",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "CO_M010",
+   "subteam": "Cooling",
+   "title": "Heat Rejection and Pressure Drop Targets",
+   "start": "",
+   "due": "2026-09-11",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "CO_M011",
+   "subteam": "Cooling",
+   "title": "Liquid Loop Simulation Running",
+   "start": "",
+   "due": "2026-09-01",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "CO_M012",
+   "subteam": "Cooling",
+   "title": "Mock Endurance ARG26",
+   "start": "2026-08-31",
+   "due": "2026-09-04",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "Full-system Cooling validation during mock endurance"
+  },
+  {
+   "id": "CO_M013",
+   "subteam": "Cooling",
+   "title": "Liquid Loop Installed on Car",
+   "start": "2027-01-15",
+   "due": "2027-01-22",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "Final liquid loop assembled and integrated onto vehicle"
+  },
+  {
+   "id": "FW_M001",
+   "subteam": "Firmware",
+   "title": "ARG26 VD Working and Tunable",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "FW_M002",
+   "subteam": "Firmware",
+   "title": "ARG26 VD Fully Tested",
+   "start": "",
+   "due": "2026-10-25",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "Due date is ADR; high-level validation of active vehicle dynamics controls"
+  },
+  {
+   "id": "FW_M003",
+   "subteam": "Firmware",
+   "title": "BMS Code Validated",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "High-level validation milestone for BMS firmware"
+  },
+  {
+   "id": "AU_M001",
+   "subteam": "Autonomy",
+   "title": "Autonomous Sensor + ARG26 Trackdrive",
+   "start": "",
+   "due": "2026-10-17",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "AU_M002",
+   "subteam": "Autonomy",
+   "title": "Mapping + ARG26 Trackdrive",
+   "start": "",
+   "due": "2026-11-30",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "AU_M003",
+   "subteam": "Autonomy",
+   "title": "Integration of DV + ARG26",
+   "start": "",
+   "due": "2027-02-22",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "AU_M004",
+   "subteam": "Autonomy",
+   "title": "First driverless motion through set of cones",
+   "start": "",
+   "due": "2027-03-08",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "AU_M005",
+   "subteam": "Autonomy",
+   "title": "First full driverless autox",
+   "start": "",
+   "due": "2027-04-05",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "AU_M006",
+   "subteam": "Autonomy",
+   "title": "Furst full driverless trackdrive",
+   "start": "",
+   "due": "2027-05-12",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "AU_M007",
+   "subteam": "Autonomy",
+   "title": "Sensors and Compute Ordered",
+   "start": "",
+   "due": "2026-09-29",
+   "status": "Blocked",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "AE_M001",
+   "subteam": "Aerodynamics",
+   "title": "CFD Freeze",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "AE_M002",
+   "subteam": "Aerodynamics",
+   "title": "Finalize Aero Targets",
+   "start": "",
+   "due": "",
+   "status": "In Progress",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "AE_M003",
+   "subteam": "Aerodynamics",
+   "title": "Plugs and Tooling Made",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "AE_M004",
+   "subteam": "Aerodynamics",
+   "title": "Mounted to car",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "ER_M001",
+   "subteam": "Ergonomics",
+   "title": "Ergo Points Finalized",
+   "start": "",
+   "due": "2026-09-30",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "ER_M002",
+   "subteam": "Ergonomics",
+   "title": "Steering System Components Ordered",
+   "start": "",
+   "due": "2026-11-13",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "ER_M003",
+   "subteam": "Ergonomics",
+   "title": "All Driver Loads Redefined",
+   "start": "",
+   "due": "2026-09-18",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "ER_M004",
+   "subteam": "Ergonomics",
+   "title": "Mock Cockpit Template Passed",
+   "start": "2027-02-01",
+   "due": "2027-02-12",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "High-level validation of completed cockpit/ergonomics package"
+  },
+  {
+   "id": "MO_M001",
+   "subteam": "Monocoque",
+   "title": "Order Carbon for Monocoque",
+   "start": "",
+   "due": "2026-07-08",
+   "status": "Complete",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "MO_M002",
+   "subteam": "Monocoque",
+   "title": "All Monocoque Material Ordered",
+   "start": "",
+   "due": "2026-08-14",
+   "status": "In Progress",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "MO_M003",
+   "subteam": "Monocoque",
+   "title": "Have All Carbon (latest)",
+   "start": "",
+   "due": "2026-09-07",
+   "status": "In Progress",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "MO_M004",
+   "subteam": "Monocoque",
+   "title": "Update and lock CAD drill point (MAY CHANGE)",
+   "start": "",
+   "due": "2026-10-19",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "dependent on susp and other subteams"
+  },
+  {
+   "id": "MO_M005",
+   "subteam": "Monocoque",
+   "title": "Holes Drilled into Plug",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "MO_M006",
+   "subteam": "Monocoque",
+   "title": "Plug Post Processed",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "MO_M007",
+   "subteam": "Monocoque",
+   "title": "Finish releasing one mold",
+   "start": "",
+   "due": "2026-11-19",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "MO_M008",
+   "subteam": "Monocoque",
+   "title": "Ply schedules FROZEN",
+   "start": "",
+   "due": "2026-11-20",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "MO_M009",
+   "subteam": "Monocoque",
+   "title": "SES Submitted",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "MO_M010",
+   "subteam": "Monocoque",
+   "title": "Monocoque Drop",
+   "start": "",
+   "due": "2027-01-18",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "MO_M011",
+   "subteam": "Monocoque",
+   "title": "Molds Complete and SES Submission Confirmed",
+   "start": "2026-12-06",
+   "due": "2026-12-06",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "Major tooling/SES readiness milestone"
+  },
+  {
+   "id": "MO_M012",
+   "subteam": "Monocoque",
+   "title": "Monocoque Released from Molds",
+   "start": "2027-01-18",
+   "due": "2027-01-18",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "Completed manufactured monocoque released from tooling"
+  },
+  {
+   "id": "MO_M013",
+   "subteam": "Monocoque",
+   "title": "Chassis Integration Complete",
+   "start": "2027-01-29",
+   "due": "2027-01-29",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "Chassis integration complete"
+  },
+  {
+   "id": "MO_M014",
+   "subteam": "Monocoque",
+   "title": "Rolling Chassis",
+   "start": "2027-02-04",
+   "due": "2027-02-04",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "Tentative; timing may depend on another subteam"
+  },
+  {
+   "id": "MO_M015",
+   "subteam": "Monocoque",
+   "title": "First Drive",
+   "start": "2027-02-14",
+   "due": "2027-02-14",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "Vehicle achieves first drive"
+  },
+  {
+   "id": "SU_M001",
+   "subteam": "Suspension",
+   "title": "Finalize Tire Choice",
+   "start": "",
+   "due": "2026-09-06",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "Recheck tire data"
+  },
+  {
+   "id": "SU_M002",
+   "subteam": "Suspension",
+   "title": "Points Finalized",
+   "start": "",
+   "due": "2026-09-15",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "SU_M003",
+   "subteam": "Suspension",
+   "title": "Link Loads Finalized",
+   "start": "",
+   "due": "2026-09-28",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "SU_M004",
+   "subteam": "Suspension",
+   "title": "Finalize ARB stifness",
+   "start": "",
+   "due": "2026-09-28",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "SU_M005",
+   "subteam": "Suspension",
+   "title": "Finalize Rates",
+   "start": "",
+   "due": "2026-09-28",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "SU_M006",
+   "subteam": "Suspension",
+   "title": "Finalize WB, Front and Rear TWs, Ride Height, Weight Distribution, CG Height, Vehicle/Driver/Sprung Weights",
+   "start": "",
+   "due": "2026-09-06",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "Does this depend on driver selection?"
+  },
+  {
+   "id": "SU_M007",
+   "subteam": "Suspension",
+   "title": "Suspension Assembled on Car",
+   "start": "",
+   "due": "2027-01-24",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "SU_M008",
+   "subteam": "Suspension",
+   "title": "Suspension PDR drafts done",
+   "start": "",
+   "due": "2026-09-21",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "SU_M009",
+   "subteam": "Suspension",
+   "title": "Finalize Suspension Weight Budget",
+   "start": "",
+   "due": "2026-09-01",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "SU_M010",
+   "subteam": "Suspension",
+   "title": "Ready to Analyze and Interpret Car Data",
+   "start": "",
+   "due": "2026-08-30",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "Compile list of ARG26 sensors and how interpret"
+  },
+  {
+   "id": "SU_M011",
+   "subteam": "Suspension",
+   "title": "First Suspension Assembly",
+   "start": "2027-01-18",
+   "due": "2027-01-21",
+   "status": "Not Started",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": "Major subteam-level milestone representing first complete suspension assembly"
+  },
+  {
+   "id": "BU_M001",
+   "subteam": "Business",
+   "title": "Upperclassman Apps Due",
+   "start": "",
+   "due": "2026-09-01",
+   "status": "In Progress",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "BU_M002",
+   "subteam": "Business",
+   "title": "Upperclassman Offer",
+   "start": "",
+   "due": "2026-09-16",
+   "status": "",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  },
+  {
+   "id": "BU_M003",
+   "subteam": "Business",
+   "title": "First Year Offer",
+   "start": "",
+   "due": "2026-11-02",
+   "status": "",
+   "goalIds": [],
+   "dependsOn": [],
+   "notes": ""
+  }
+ ],
+ "tasks": [
+  {
+   "id": "GE_A00_T001",
+   "subteam": "General",
+   "title": "Subteam part designer sprints",
+   "assembly": "General",
+   "assemblyCode": "A00",
+   "start": "2026-08-31",
+   "due": "2026-09-04",
+   "status": "In Progress",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "GE_A00_T002",
+   "subteam": "General",
+   "title": "Tuning for Toronto Shootout",
+   "assembly": "General",
+   "assemblyCode": "A00",
+   "start": "2026-09-21",
+   "due": "2026-09-30",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Caroline Moskal"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "GE_A00_T003",
+   "subteam": "General",
+   "title": "Pack for Toronto Shootout",
+   "assembly": "General",
+   "assemblyCode": "A00",
+   "start": "2026-10-01",
+   "due": "2026-10-02",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Caroline Moskal"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "GE_A00_T004",
+   "subteam": "General",
+   "title": "Tech inspection for Toronto Shootout",
+   "assembly": "General",
+   "assemblyCode": "A00",
+   "start": "2026-09-28",
+   "due": "2026-09-30",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Caroline Moskal"
+   ],
+   "priority": "High",
+   "dependsOn": [
+    "GE_A00_T002"
+   ],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "GE_A01_T001",
+   "subteam": "General",
+   "title": "Mech Check outs for ARG26",
+   "assembly": "Chassis",
+   "assemblyCode": "A01",
+   "start": "2026-08-30",
+   "due": "2026-09-01",
+   "status": "Complete",
+   "milestoneId": "",
+   "owners": [
+    "Nicholas Gavalas"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "GE_A01_T002",
+   "subteam": "General",
+   "title": "ARG26 Bolt Check",
+   "assembly": "Chassis",
+   "assemblyCode": "A01",
+   "start": "2026-08-30",
+   "due": "2026-08-31",
+   "status": "In Progress",
+   "milestoneId": "",
+   "owners": [
+    "Nicholas Gavalas"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "GE_A02_T001",
+   "subteam": "General",
+   "title": "EV Check outs for ARG26",
+   "assembly": "Powertrain",
+   "assemblyCode": "A02",
+   "start": "2026-08-31",
+   "due": "2026-09-02",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Will Hutter"
+   ],
+   "priority": "High",
+   "dependsOn": [
+    "GE_A01_T002"
+   ],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "GE_A02_T002",
+   "subteam": "General",
+   "title": "Sensor integration on ARG26",
+   "assembly": "Powertrain",
+   "assemblyCode": "A02",
+   "start": "2026-09-01",
+   "due": "2026-09-05",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Will Hutter"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "GE_A02_T003",
+   "subteam": "General",
+   "title": "Charging ARG26 pack",
+   "assembly": "Powertrain",
+   "assemblyCode": "A02",
+   "start": "2026-09-02",
+   "due": "2026-09-04",
+   "status": "Complete",
+   "milestoneId": "",
+   "owners": [
+    "Will Hutter"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "HV_A01_T001",
+   "subteam": "High Voltage",
+   "title": "test task",
+   "assembly": "High Voltage",
+   "assemblyCode": "A01",
+   "start": "",
+   "due": "",
+   "status": "",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "LV_A01_T001",
+   "subteam": "Low Voltage",
+   "title": "Altium library basics finished",
+   "assembly": "Low Voltage",
+   "assemblyCode": "A01",
+   "start": "2026-07-13",
+   "due": "2026-08-09",
+   "status": "In Review",
+   "milestoneId": "",
+   "owners": [
+    "Arielle Huang"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Commonized components",
+   "notes": ""
+  },
+  {
+   "id": "LV_A04_T001",
+   "subteam": "Low Voltage",
+   "title": "Design first rev of BMS Child",
+   "assembly": "BMS Child",
+   "assemblyCode": "A04",
+   "start": "2026-08-01",
+   "due": "2026-09-01",
+   "status": "In Progress",
+   "milestoneId": "",
+   "owners": [
+    "Sam Hunter"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "PCB ordered",
+   "notes": ""
+  },
+  {
+   "id": "LV_A04_T002",
+   "subteam": "Low Voltage",
+   "title": "Test/debug first rev of BMS child",
+   "assembly": "BMS Child",
+   "assemblyCode": "A04",
+   "start": "2026-09-07",
+   "due": "2026-09-21",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Sam Hunter"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Test report/results + required modifications",
+   "notes": "Dependent on LV006, couldn't select it"
+  },
+  {
+   "id": "LV_A04_T003",
+   "subteam": "Low Voltage",
+   "title": "Validate communication between BMS child/mother",
+   "assembly": "BMS Child",
+   "assemblyCode": "A04",
+   "start": "2026-09-21",
+   "due": "2026-10-01",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Sam Hunter"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Functional basic BSM system",
+   "notes": "Timeline dependent on LV007, couldn't select it. Also Natsu is a co-owner, couldn't add him."
+  },
+  {
+   "id": "LV_A04_T004",
+   "subteam": "Low Voltage",
+   "title": "Design final rev of BMS child for module integration",
+   "assembly": "BMS Child",
+   "assemblyCode": "A04",
+   "start": "2026-10-01",
+   "due": "2026-11-16",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Sam Hunter"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "PCB ordered",
+   "notes": "Dependent on LV008"
+  },
+  {
+   "id": "LV_A04_T005",
+   "subteam": "Low Voltage",
+   "title": "Test final rev of BMS child",
+   "assembly": "BMS Child",
+   "assemblyCode": "A04",
+   "start": "2026-11-23",
+   "due": "2026-12-01",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Sam Hunter"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Functioning child board",
+   "notes": "Dependent on LV009"
+  },
+  {
+   "id": "LV_A04_T006",
+   "subteam": "Low Voltage",
+   "title": "Bring up + validate all BMS children + spares",
+   "assembly": "BMS Child",
+   "assemblyCode": "A04",
+   "start": "2026-12-01",
+   "due": "2027-01-15",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Sam Hunter"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Working BMS system",
+   "notes": "Dependent on LV010"
+  },
+  {
+   "id": "LV_A06_T001",
+   "subteam": "Low Voltage",
+   "title": "Shutdown circuit closes",
+   "assembly": "Shutdown",
+   "assemblyCode": "A06",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Arielle Huang Valerie Shu"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "LV_A07_T001",
+   "subteam": "Low Voltage",
+   "title": "Precharge and discharge validated",
+   "assembly": "Discharge",
+   "assemblyCode": "A07",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Arielle Huang Nathaniel Su"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "LV_A08_T001",
+   "subteam": "Low Voltage",
+   "title": "Get PDM08 and ACC3s",
+   "assembly": "PDU",
+   "assemblyCode": "A08",
+   "start": "2026-08-09",
+   "due": "2026-09-07",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "LV_A08_T002",
+   "subteam": "Low Voltage",
+   "title": "HV DCDC/LV DCDC Choice",
+   "assembly": "PDU",
+   "assemblyCode": "A08",
+   "start": "",
+   "due": "",
+   "status": "In Progress",
+   "milestoneId": "",
+   "owners": [
+    "Arielle Huang Sean Li"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "HV DCDC locked",
+   "notes": "For PDU, depends on cooling"
+  },
+  {
+   "id": "LV_A08_T003",
+   "subteam": "Low Voltage",
+   "title": "Design first rev of PDU",
+   "assembly": "PDU",
+   "assemblyCode": "A08",
+   "start": "2026-08-05",
+   "due": "2026-09-05",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Sean Li"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "PCB ordered",
+   "notes": "dependent on cooling pump/radiator/fan selection"
+  },
+  {
+   "id": "LV_A09_T001",
+   "subteam": "Low Voltage",
+   "title": "Dash multple screens",
+   "assembly": "Dash",
+   "assemblyCode": "A09",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Yifan Li Keira Chen"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "LV_A09_T002",
+   "subteam": "Low Voltage",
+   "title": "Design first rev of Dash",
+   "assembly": "Dash",
+   "assemblyCode": "A09",
+   "start": "",
+   "due": "",
+   "status": "Planned",
+   "milestoneId": "",
+   "owners": [
+    "Keira Chen"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "PCB ordered",
+   "notes": ""
+  },
+  {
+   "id": "LV_A09_T003",
+   "subteam": "Low Voltage",
+   "title": "Order Dash components",
+   "assembly": "Dash",
+   "assemblyCode": "A09",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Keira Chen"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "components arrive",
+   "notes": ""
+  },
+  {
+   "id": "LV_A09_T004",
+   "subteam": "Low Voltage",
+   "title": "Bring up + Test Dash rev1",
+   "assembly": "Dash",
+   "assemblyCode": "A09",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Keira Chen"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "working Dash board",
+   "notes": ""
+  },
+  {
+   "id": "LV_A09_T005",
+   "subteam": "Low Voltage",
+   "title": "Dash harnessing",
+   "assembly": "Dash",
+   "assemblyCode": "A09",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Keira Chen"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "harness is complete",
+   "notes": ""
+  },
+  {
+   "id": "LV_A09_T006",
+   "subteam": "Low Voltage",
+   "title": "Dash integration",
+   "assembly": "Dash",
+   "assemblyCode": "A09",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Keira Chen"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "dash is on car and working",
+   "notes": ""
+  },
+  {
+   "id": "LV_A09_T007",
+   "subteam": "Low Voltage",
+   "title": "Bring up final rev Dash spares",
+   "assembly": "Dash",
+   "assemblyCode": "A09",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Keira Chen"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "spares are available",
+   "notes": ""
+  },
+  {
+   "id": "CO_A02_T002",
+   "subteam": "Cooling",
+   "title": "Run full liquid loop pressure drop test",
+   "assembly": "Liquid Loop",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Ilana Yousuf"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "CO_A02_T009",
+   "subteam": "Cooling",
+   "title": "Identify system parameters w/ hand calcs and data",
+   "assembly": "Liquid Loop",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Ilana Yousuf"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "CO_A02_T003",
+   "subteam": "Cooling",
+   "title": "Determine necessary radiator and fan specifications",
+   "assembly": "Liquid Loop",
+   "assemblyCode": "A02",
+   "start": "2026-09-08",
+   "due": "2026-09-11",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Ilana Yousuf"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "CO_A02_T004",
+   "subteam": "Cooling",
+   "title": "Order stock radiator for testing",
+   "assembly": "Liquid Loop",
+   "assemblyCode": "A02",
+   "start": "2026-09-15",
+   "due": "2026-09-20",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Ilana Yousuf"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "CO_A02_T005",
+   "subteam": "Cooling",
+   "title": "Test and confirm geometry/layout",
+   "assembly": "Liquid Loop",
+   "assemblyCode": "A02",
+   "start": "2026-09-15",
+   "due": "2026-09-25",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Ilana Yousuf"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "CO_A02_T001",
+   "subteam": "Cooling",
+   "title": "PRIORITY: order custom radiator",
+   "assembly": "Liquid Loop",
+   "assemblyCode": "A02",
+   "start": "2026-09-11",
+   "due": "2026-09-30",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Ilana Yousuf"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "CO_A02_T006",
+   "subteam": "Cooling",
+   "title": "Manufacture liquid loop prototype",
+   "assembly": "Liquid Loop",
+   "assemblyCode": "A02",
+   "start": "2026-10-01",
+   "due": "2026-10-08",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Ilana Yousuf"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "CO_A02_T007",
+   "subteam": "Cooling",
+   "title": "Conduct tests and collect data for pressure drop and heat rejection",
+   "assembly": "Liquid Loop",
+   "assemblyCode": "A02",
+   "start": "2026-10-10",
+   "due": "2026-10-17",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Ilana Yousuf"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "CO_A02_T008",
+   "subteam": "Cooling",
+   "title": "Assemble final liquid loop on bench",
+   "assembly": "Liquid Loop",
+   "assemblyCode": "A02",
+   "start": "2027-01-04",
+   "due": "2027-01-15",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Ilana Yousuf"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "CO_A02_T010",
+   "subteam": "Cooling",
+   "title": "Calibrate Temp sensors and put on car for endurance testing",
+   "assembly": "Liquid Loop",
+   "assemblyCode": "A02",
+   "start": "2026-09-04",
+   "due": "2026-09-04",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "CO_A03_T001",
+   "subteam": "Cooling",
+   "title": "Run motor sleeve heat rejection + flow test",
+   "assembly": "Cooling Sleeve",
+   "assemblyCode": "A03",
+   "start": "",
+   "due": "",
+   "status": "",
+   "milestoneId": "",
+   "owners": [
+    "Usanbolor Amartuvshin"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "CO_A03_T002",
+   "subteam": "Cooling",
+   "title": "Cooling Sleeve ANSYS Model",
+   "assembly": "Cooling Sleeve",
+   "assemblyCode": "A03",
+   "start": "",
+   "due": "",
+   "status": "",
+   "milestoneId": "",
+   "owners": [
+    "Usanbolor Amartuvshin"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Acc architecture finalized prerec",
+   "notes": ""
+  },
+  {
+   "id": "CO_A03_T003",
+   "subteam": "Cooling",
+   "title": "Determine Cooling Sleeve Sealing Strategy",
+   "assembly": "Cooling Sleeve",
+   "assemblyCode": "A03",
+   "start": "2026-08-26",
+   "due": "",
+   "status": "In Progress",
+   "milestoneId": "",
+   "owners": [
+    "Usanbolor Amartuvshin"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "CO_A04_T001",
+   "subteam": "Cooling",
+   "title": "Acc Cooling ANSYS Model",
+   "assembly": "Accumulator Cooling",
+   "assemblyCode": "A04",
+   "start": "",
+   "due": "",
+   "status": "",
+   "milestoneId": "",
+   "owners": [
+    "Theresa Franklin"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "CO_A04_T002",
+   "subteam": "Cooling",
+   "title": "Base Simulation for Acc Cooling + Feasible Configurations",
+   "assembly": "Accumulator Cooling",
+   "assemblyCode": "A04",
+   "start": "2026-08-26",
+   "due": "2026-08-30",
+   "status": "In Progress",
+   "milestoneId": "",
+   "owners": [
+    "Theresa Franklin"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "CO_A04_T003",
+   "subteam": "Cooling",
+   "title": "Preliminary Acc Cooling Testing",
+   "assembly": "Accumulator Cooling",
+   "assemblyCode": "A04",
+   "start": "2026-08-30",
+   "due": "2026-09-10",
+   "status": "In Progress",
+   "milestoneId": "",
+   "owners": [
+    "Theresa Franklin"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A01_T001",
+   "subteam": "Firmware",
+   "title": "ARG27 VD flashed on car",
+   "assembly": "Firmware",
+   "assemblyCode": "A01",
+   "start": "",
+   "due": "",
+   "status": "",
+   "milestoneId": "",
+   "owners": [
+    "Amrita Talwar"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A02_T001",
+   "subteam": "Firmware",
+   "title": "SOC drawn out implementation",
+   "assembly": "BMS Code",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "2026-09-28",
+   "status": "In Progress",
+   "milestoneId": "",
+   "owners": [
+    "Nathaniel Su"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A02_T002",
+   "subteam": "Firmware",
+   "title": "ACU bring up testing branch formed",
+   "assembly": "BMS Code",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "2026-09-28",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Nathaniel Su"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A02_T003",
+   "subteam": "Firmware",
+   "title": "SOC working on arg26",
+   "assembly": "BMS Code",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "2026-10-25",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Nathaniel Su"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A02_T004",
+   "subteam": "Firmware",
+   "title": "LAMBMS what needs to change ready",
+   "assembly": "BMS Code",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "2026-10-25",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Nathaniel Su"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A02_T005",
+   "subteam": "Firmware",
+   "title": "Serial monitor clean up",
+   "assembly": "BMS Code",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "2026-10-25",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Nathaniel Su"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A02_T006",
+   "subteam": "Firmware",
+   "title": "SOC on arg27",
+   "assembly": "BMS Code",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "2026-11-25",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Nathaniel Su"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A03_T001",
+   "subteam": "Firmware",
+   "title": "RTOS implemented on ARG26",
+   "assembly": "ECU Code",
+   "assemblyCode": "A03",
+   "start": "",
+   "due": "2026-10-25",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Amrita Talwar"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A03_T002",
+   "subteam": "Firmware",
+   "title": "RTOS MVP",
+   "assembly": "ECU Code",
+   "assemblyCode": "A03",
+   "start": "",
+   "due": "2026-09-28",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Shadman Syed"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A03_T003",
+   "subteam": "Firmware",
+   "title": "RTOS testing done",
+   "assembly": "ECU Code",
+   "assemblyCode": "A03",
+   "start": "",
+   "due": "2026-10-04",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Shadman Syed"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A04_T001",
+   "subteam": "Firmware",
+   "title": "Lanch control simple model",
+   "assembly": "Active VD Controls",
+   "assemblyCode": "A04",
+   "start": "",
+   "due": "2026-09-28",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Xinyuan (Yolanda) Zhou"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A04_T002",
+   "subteam": "Firmware",
+   "title": "Power limiting simple model",
+   "assembly": "Active VD Controls",
+   "assemblyCode": "A04",
+   "start": "",
+   "due": "2026-09-28",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Xinyuan (Yolanda) Zhou"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A04_T003",
+   "subteam": "Firmware",
+   "title": "Regen simple model",
+   "assembly": "Active VD Controls",
+   "assemblyCode": "A04",
+   "start": "",
+   "due": "2026-09-28",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Xinyuan (Yolanda) Zhou"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A04_T004",
+   "subteam": "Firmware",
+   "title": "Torque Vectoring simple model",
+   "assembly": "Active VD Controls",
+   "assemblyCode": "A04",
+   "start": "",
+   "due": "2026-10-25",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Xinyuan (Yolanda) Zhou"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A04_T005",
+   "subteam": "Firmware",
+   "title": "Power limiting complex model",
+   "assembly": "Active VD Controls",
+   "assemblyCode": "A04",
+   "start": "",
+   "due": "2026-11-25",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Xinyuan (Yolanda) Zhou"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A04_T006",
+   "subteam": "Firmware",
+   "title": "Regen Complex Model",
+   "assembly": "Active VD Controls",
+   "assemblyCode": "A04",
+   "start": "",
+   "due": "2026-11-25",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Xinyuan (Yolanda) Zhou"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A04_T007",
+   "subteam": "Firmware",
+   "title": "Torque Vectoring Complex Model",
+   "assembly": "Active VD Controls",
+   "assemblyCode": "A04",
+   "start": "",
+   "due": "2027-01-14",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Xinyuan (Yolanda) Zhou"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": "subject to change depending on JanMan"
+  },
+  {
+   "id": "FW_A04_T008",
+   "subteam": "Firmware",
+   "title": "Launch Control Complex Modeling",
+   "assembly": "Active VD Controls",
+   "assemblyCode": "A04",
+   "start": "",
+   "due": "2027-01-14",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Xinyuan (Yolanda) Zhou"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": "subject to change depending on JanMan"
+  },
+  {
+   "id": "FW_A04_T009",
+   "subteam": "Firmware",
+   "title": "VD DTI motor Comparision",
+   "assembly": "Active VD Controls",
+   "assemblyCode": "A04",
+   "start": "",
+   "due": "2026-09-28",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Xinyuan (Yolanda) Zhou"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A04_T010",
+   "subteam": "Firmware",
+   "title": "VD testing plan for all four compontents",
+   "assembly": "Active VD Controls",
+   "assemblyCode": "A04",
+   "start": "",
+   "due": "2026-09-28",
+   "status": "",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A04_T013",
+   "subteam": "Firmware",
+   "title": "Simplified RTOS implementation for ECU",
+   "assembly": "Active VD Controls",
+   "assemblyCode": "A04",
+   "start": "",
+   "due": "2026-09-15",
+   "status": "In Progress",
+   "milestoneId": "",
+   "owners": [
+    "Shadman Syed"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A04_T014",
+   "subteam": "Firmware",
+   "title": "Full RTOS port of ECU",
+   "assembly": "Active VD Controls",
+   "assemblyCode": "A04",
+   "start": "",
+   "due": "2026-09-26",
+   "status": "Blocked",
+   "milestoneId": "",
+   "owners": [
+    "Shadman Syed"
+   ],
+   "priority": "Critical",
+   "dependsOn": [
+    "FW_A04_T013"
+   ],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A04_T015",
+   "subteam": "Firmware",
+   "title": "Debug RTOS port for concurrency issues",
+   "assembly": "Active VD Controls",
+   "assemblyCode": "A04",
+   "start": "",
+   "due": "2026-10-03",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A04_T016",
+   "subteam": "Firmware",
+   "title": "Implementing the VD simple models",
+   "assembly": "Active VD Controls",
+   "assemblyCode": "A04",
+   "start": "2026-10-05",
+   "due": "2026-10-31",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "High",
+   "dependsOn": [
+    "FW_A04_T004"
+   ],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A05_T001",
+   "subteam": "Firmware",
+   "title": "Diagrams done, Changes to Dash finialized",
+   "assembly": "Dash Firmware",
+   "assemblyCode": "A05",
+   "start": "",
+   "due": "2026-09-28",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Yifan Li"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A05_T002",
+   "subteam": "Firmware",
+   "title": "Arg26 Dash fixed",
+   "assembly": "Dash Firmware",
+   "assemblyCode": "A05",
+   "start": "",
+   "due": "2026-10-25",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Yifan Li"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A05_T003",
+   "subteam": "Firmware",
+   "title": "CanLib integreated to dash",
+   "assembly": "Dash Firmware",
+   "assemblyCode": "A05",
+   "start": "",
+   "due": "2026-11-25",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Yifan Li"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A05_T004",
+   "subteam": "Firmware",
+   "title": "dash code done",
+   "assembly": "Dash Firmware",
+   "assemblyCode": "A05",
+   "start": "",
+   "due": "2027-01-14",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Yifan Li"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A05_T005",
+   "subteam": "Firmware",
+   "title": "website done",
+   "assembly": "Dash Firmware",
+   "assemblyCode": "A05",
+   "start": "",
+   "due": "2027-01-14",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Yifan Li"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A05_T007",
+   "subteam": "Firmware",
+   "title": "Power limiting Logging off car",
+   "assembly": "Dash Firmware",
+   "assemblyCode": "A05",
+   "start": "",
+   "due": "2026-09-28",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Yifan Li"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "FW_A06_T001",
+   "subteam": "Firmware",
+   "title": "Telem website working",
+   "assembly": "Other Firmware",
+   "assemblyCode": "A06",
+   "start": "",
+   "due": "",
+   "status": "",
+   "milestoneId": "",
+   "owners": [
+    "Amrita Talwar"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A02_T001",
+   "subteam": "Autonomy",
+   "title": "Design modular ARG26 sensor mount(s)",
+   "assembly": "Autonomy Mechanical",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "2026-09-09",
+   "status": "Not Started",
+   "milestoneId": "AU_M001",
+   "owners": [
+    "Teddy Duncker"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A02_T002",
+   "subteam": "Autonomy",
+   "title": "Calculate drag of sensor choices for Nicholas",
+   "assembly": "Autonomy Mechanical",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Teddy Duncker"
+   ],
+   "priority": "Low",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A02_T003",
+   "subteam": "Autonomy",
+   "title": "Build steering actuator system",
+   "assembly": "Autonomy Mechanical",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "AU_M004",
+   "owners": [
+    "Teddy Duncker"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A02_T004",
+   "subteam": "Autonomy",
+   "title": "Integrate sensor mount onto ARG26",
+   "assembly": "Autonomy Mechanical",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "AU_M001",
+   "owners": [
+    "Teddy Duncker"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A03_T001",
+   "subteam": "Autonomy",
+   "title": "Centerline vs. optimized analysis",
+   "assembly": "Path Planning and Following",
+   "assemblyCode": "A03",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Sayee Edekar"
+   ],
+   "priority": "Low",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": "Not required"
+  },
+  {
+   "id": "AU_A03_T002",
+   "subteam": "Autonomy",
+   "title": "Steering actuator step response transfer function generation",
+   "assembly": "Path Planning and Following",
+   "assemblyCode": "A03",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "AU_M004",
+   "owners": [
+    "Sayee Edekar"
+   ],
+   "priority": "High",
+   "dependsOn": [
+    "AU_A02_T003"
+   ],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A03_T003",
+   "subteam": "Autonomy",
+   "title": "Minimum lookahead & FOV analysis",
+   "assembly": "Path Planning and Following",
+   "assemblyCode": "A03",
+   "start": "",
+   "due": "2026-07-26",
+   "status": "Complete",
+   "milestoneId": "AU_M007",
+   "owners": [
+    "Teddy Duncker"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A03_T004",
+   "subteam": "Autonomy",
+   "title": "Model Predictive Control parameters calculated",
+   "assembly": "Path Planning and Following",
+   "assemblyCode": "A03",
+   "start": "",
+   "due": "2026-11-01",
+   "status": "Not Started",
+   "milestoneId": "AU_M004",
+   "owners": [
+    "Sayee Edekar"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A04_T001",
+   "subteam": "Autonomy",
+   "title": "Camera choice",
+   "assembly": "Sensors and Harnessing",
+   "assemblyCode": "A04",
+   "start": "",
+   "due": "",
+   "status": "Complete",
+   "milestoneId": "AU_M007",
+   "owners": [
+    "Teddy Duncker"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A04_T002",
+   "subteam": "Autonomy",
+   "title": "LiDAR choice",
+   "assembly": "Sensors and Harnessing",
+   "assemblyCode": "A04",
+   "start": "",
+   "due": "",
+   "status": "Complete",
+   "milestoneId": "AU_M007",
+   "owners": [
+    "Teddy Duncker"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A05_T001",
+   "subteam": "Autonomy",
+   "title": "Compute module choice",
+   "assembly": "Compute and Hardware",
+   "assemblyCode": "A05",
+   "start": "",
+   "due": "2026-08-31",
+   "status": "Complete",
+   "milestoneId": "AU_M007",
+   "owners": [
+    "Benson Zhuo"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A05_T002",
+   "subteam": "Autonomy",
+   "title": "Figure out what PCBs will be needed for safety compliance autonomy integration to ARG26",
+   "assembly": "Compute and Hardware",
+   "assemblyCode": "A05",
+   "start": "",
+   "due": "2026-08-28",
+   "status": "Complete",
+   "milestoneId": "AU_M004",
+   "owners": [
+    "Benson Zhuo"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A05_T003",
+   "subteam": "Autonomy",
+   "title": "Place order for DCU",
+   "assembly": "Compute and Hardware",
+   "assemblyCode": "A05",
+   "start": "",
+   "due": "2026-09-18",
+   "status": "Not Started",
+   "milestoneId": "AU_M004",
+   "owners": [
+    "Benson Zhuo"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A05_T004",
+   "subteam": "Autonomy",
+   "title": "Bring up and test DCU",
+   "assembly": "Compute and Hardware",
+   "assemblyCode": "A05",
+   "start": "",
+   "due": "2026-10-09",
+   "status": "Not Started",
+   "milestoneId": "AU_M004",
+   "owners": [
+    "Benson Zhuo"
+   ],
+   "priority": "Medium",
+   "dependsOn": [
+    "AU_A05_T003"
+   ],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A05_T005",
+   "subteam": "Autonomy",
+   "title": "Order RAM, storage, CAN PCIe card",
+   "assembly": "Compute and Hardware",
+   "assemblyCode": "A05",
+   "start": "",
+   "due": "2026-09-07",
+   "status": "Not Started",
+   "milestoneId": "AU_M007",
+   "owners": [
+    "Benson Zhuo"
+   ],
+   "priority": "Critical",
+   "dependsOn": [
+    "AU_A05_T001"
+   ],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A06_T001",
+   "subteam": "Autonomy",
+   "title": "Buy Cones & Reflective Tape",
+   "assembly": "Perception and Data Interface",
+   "assemblyCode": "A06",
+   "start": "",
+   "due": "2026-09-07",
+   "status": "In Progress",
+   "milestoneId": "AU_M001",
+   "owners": [
+    "Emily Ng"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A06_T002",
+   "subteam": "Autonomy",
+   "title": "Get Camera Data off of the Hteng Vishi to Linux/ROS",
+   "assembly": "Perception and Data Interface",
+   "assemblyCode": "A06",
+   "start": "",
+   "due": "2026-09-09",
+   "status": "Not Started",
+   "milestoneId": "AU_M001",
+   "owners": [
+    "Emily Ng"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A06_T003",
+   "subteam": "Autonomy",
+   "title": "Determine required peripherals for putting cameras on car",
+   "assembly": "Perception and Data Interface",
+   "assemblyCode": "A06",
+   "start": "",
+   "due": "2026-09-09",
+   "status": "Not Started",
+   "milestoneId": "AU_M001",
+   "owners": [
+    "Emily Ng"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A06_T004",
+   "subteam": "Autonomy",
+   "title": "CNN/YOLO/other detector for cone color type in autolab",
+   "assembly": "Perception and Data Interface",
+   "assemblyCode": "A06",
+   "start": "",
+   "due": "2026-09-16",
+   "status": "Not Started",
+   "milestoneId": "AU_M002",
+   "owners": [
+    "Emily Ng"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A06_T005",
+   "subteam": "Autonomy",
+   "title": "Get Data off of the LiDAR",
+   "assembly": "Perception and Data Interface",
+   "assemblyCode": "A06",
+   "start": "",
+   "due": "2026-09-30",
+   "status": "Not Started",
+   "milestoneId": "AU_M001",
+   "owners": [
+    "Emily Ng"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": "Will depend on LiDAR delivery date"
+  },
+  {
+   "id": "AU_A06_T007",
+   "subteam": "Autonomy",
+   "title": "Implement ground removal algorithm",
+   "assembly": "Perception and Data Interface",
+   "assemblyCode": "A06",
+   "start": "",
+   "due": "2026-10-10",
+   "status": "Not Started",
+   "milestoneId": "AU_M002",
+   "owners": [
+    "Emily Ng"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A06_T006",
+   "subteam": "Autonomy",
+   "title": "Implement point clustering algorithm for LiDAR cone detection",
+   "assembly": "Perception and Data Interface",
+   "assemblyCode": "A06",
+   "start": "",
+   "due": "2026-10-15",
+   "status": "Not Started",
+   "milestoneId": "AU_M002",
+   "owners": [
+    "Emily Ng"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AU_A07_T001",
+   "subteam": "Autonomy",
+   "title": "SITL suite",
+   "assembly": "Software Pipeline",
+   "assemblyCode": "A07",
+   "start": "",
+   "due": "2027-01-20",
+   "status": "Not Started",
+   "milestoneId": "AU_M004",
+   "owners": [
+    "Emily Ng"
+   ],
+   "priority": "Low",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "AE_A01_T001",
+   "subteam": "Aerodynamics",
+   "title": "Aero Mounted",
+   "assembly": "Aerodynamics",
+   "assemblyCode": "A01",
+   "start": "2027-01-01",
+   "due": "2027-03-01",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Kathryn Ainley-Zoll"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Aero components mounted and integrated",
+   "notes": "Milestone/completion activity"
+  },
+  {
+   "id": "AE_A01_T002",
+   "subteam": "Aerodynamics",
+   "title": "Manufacture Aero, Pt 1",
+   "assembly": "Aerodynamics",
+   "assemblyCode": "A01",
+   "start": "",
+   "due": "",
+   "status": "",
+   "milestoneId": "",
+   "owners": [
+    "Kathryn Ainley-Zoll"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Manufactured aerodynamic components",
+   "notes": ""
+  },
+  {
+   "id": "AE_A01_T003",
+   "subteam": "Aerodynamics",
+   "title": "Finalize Aero Targets",
+   "assembly": "Aerodynamics",
+   "assemblyCode": "A01",
+   "start": "2026-08-01",
+   "due": "2026-08-10",
+   "status": "In Progress",
+   "milestoneId": "",
+   "owners": [
+    "Kathryn Ainley-Zoll"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Finalized aerodynamic targets",
+   "notes": ""
+  },
+  {
+   "id": "AE_A01_T004",
+   "subteam": "Aerodynamics",
+   "title": "Post PDR Alum Outreach",
+   "assembly": "Aerodynamics",
+   "assemblyCode": "A01",
+   "start": "2026-09-28",
+   "due": "2026-10-03",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Kathryn Ainley-Zoll"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "Alumni outreach completed",
+   "notes": ""
+  },
+  {
+   "id": "AE_A01_T005",
+   "subteam": "Aerodynamics",
+   "title": "Surface Modeling Training",
+   "assembly": "Aerodynamics",
+   "assemblyCode": "A01",
+   "start": "2026-08-24",
+   "due": "2026-08-28",
+   "status": "Complete",
+   "milestoneId": "",
+   "owners": [
+    "Kathryn Ainley-Zoll"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "Completed surface modeling training",
+   "notes": ""
+  },
+  {
+   "id": "AE_A01_T006",
+   "subteam": "Aerodynamics",
+   "title": "Mounting Finalized",
+   "assembly": "Aerodynamics",
+   "assemblyCode": "A01",
+   "start": "2026-08-01",
+   "due": "2026-09-28",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Kathryn Ainley-Zoll"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Finalized mounting design",
+   "notes": ""
+  },
+  {
+   "id": "AE_A01_T007",
+   "subteam": "Aerodynamics",
+   "title": "Mounting Manufactured",
+   "assembly": "Aerodynamics",
+   "assemblyCode": "A01",
+   "start": "2026-11-01",
+   "due": "2026-11-30",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Kathryn Ainley-Zoll"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Manufactured mounting hardware",
+   "notes": ""
+  },
+  {
+   "id": "AE_A01_T008",
+   "subteam": "Aerodynamics",
+   "title": "On-Car Testing",
+   "assembly": "Aerodynamics",
+   "assemblyCode": "A01",
+   "start": "2027-01-01",
+   "due": "2027-05-01",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Kathryn Ainley-Zoll"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "On-car aero testing results",
+   "notes": ""
+  },
+  {
+   "id": "AE_A01_T009",
+   "subteam": "Aerodynamics",
+   "title": "CFD Analysis Training",
+   "assembly": "Aerodynamics",
+   "assemblyCode": "A01",
+   "start": "2026-08-31",
+   "due": "2026-09-04",
+   "status": "In Progress",
+   "milestoneId": "",
+   "owners": [
+    "Kathryn Ainley-Zoll"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Completed training",
+   "notes": ""
+  },
+  {
+   "id": "AE_A02_T001",
+   "subteam": "Aerodynamics",
+   "title": "Airfoils selected for wings",
+   "assembly": "Front Wing",
+   "assemblyCode": "A02",
+   "start": "2026-09-28",
+   "due": "2026-09-29",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Lilly Varon"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Final airfoil selection",
+   "notes": ""
+  },
+  {
+   "id": "AE_A02_T002",
+   "subteam": "Aerodynamics",
+   "title": "Tooling for Wings and UT Made",
+   "assembly": "Front Wing",
+   "assemblyCode": "A02",
+   "start": "2026-11-01",
+   "due": "2026-11-14",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Lilly Varon"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Wing and undertray tooling",
+   "notes": ""
+  },
+  {
+   "id": "AE_A02_T003",
+   "subteam": "Aerodynamics",
+   "title": "Manufacturing for Wings and UT",
+   "assembly": "Front Wing",
+   "assemblyCode": "A02",
+   "start": "2027-01-01",
+   "due": "2027-02-01",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Lilly Varon"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Manufactured wings and undertray",
+   "notes": ""
+  },
+  {
+   "id": "AE_A03_T001",
+   "subteam": "Aerodynamics",
+   "title": "Airfoils selected for wings",
+   "assembly": "Rear Wing",
+   "assemblyCode": "A03",
+   "start": "2026-09-28",
+   "due": "2026-09-29",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Montserrat McCoy"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Final airfoil selection",
+   "notes": ""
+  },
+  {
+   "id": "AE_A03_T002",
+   "subteam": "Aerodynamics",
+   "title": "Tooling for Wings and UT Made",
+   "assembly": "Rear Wing",
+   "assemblyCode": "A03",
+   "start": "2026-11-01",
+   "due": "2026-11-14",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Montserrat McCoy"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Wing and undertray tooling",
+   "notes": ""
+  },
+  {
+   "id": "AE_A03_T003",
+   "subteam": "Aerodynamics",
+   "title": "Manufacturing for Wings and UT",
+   "assembly": "Rear Wing",
+   "assemblyCode": "A03",
+   "start": "2027-01-01",
+   "due": "2027-02-01",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Montserrat McCoy"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Manufactured wings and undertray",
+   "notes": ""
+  },
+  {
+   "id": "AE_A04_T001",
+   "subteam": "Aerodynamics",
+   "title": "Tooling for Wings and UT Made",
+   "assembly": "Undertray",
+   "assemblyCode": "A04",
+   "start": "2026-11-01",
+   "due": "2026-11-14",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Aidan Moller"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Wing and undertray tooling",
+   "notes": ""
+  },
+  {
+   "id": "AE_A04_T002",
+   "subteam": "Aerodynamics",
+   "title": "Manufacturing for Wings and UT",
+   "assembly": "Undertray",
+   "assemblyCode": "A04",
+   "start": "2027-01-01",
+   "due": "2027-02-01",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Aidan Moller"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Manufactured wings and undertray",
+   "notes": ""
+  },
+  {
+   "id": "AE_A05_T001",
+   "subteam": "Aerodynamics",
+   "title": "Plugs for Nosecone and Sidepods Made",
+   "assembly": "Auxiliary Elements",
+   "assemblyCode": "A05",
+   "start": "2026-10-16",
+   "due": "2026-10-24",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Junseok Kang"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Nosecone and sidepod plugs",
+   "notes": ""
+  },
+  {
+   "id": "AE_A05_T002",
+   "subteam": "Aerodynamics",
+   "title": "Manufacturing for Nosecone and Sidepod",
+   "assembly": "Auxiliary Elements",
+   "assemblyCode": "A05",
+   "start": "2026-10-24",
+   "due": "2027-03-01",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Junseok Kang"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Manufactured nosecone and sidepod",
+   "notes": ""
+  },
+  {
+   "id": "AE_A06_T001",
+   "subteam": "Aerodynamics",
+   "title": "Plugs for Nosecone and Sidepods Made",
+   "assembly": "Sidepod",
+   "assemblyCode": "A06",
+   "start": "2026-10-16",
+   "due": "2026-10-24",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Ethan Gu"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Nosecone and sidepod plugs",
+   "notes": ""
+  },
+  {
+   "id": "AE_A06_T002",
+   "subteam": "Aerodynamics",
+   "title": "Manufacturing for Nosecone and Sidepod",
+   "assembly": "Sidepod",
+   "assemblyCode": "A06",
+   "start": "2026-10-24",
+   "due": "2027-03-01",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Ethan Gu"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Manufactured nosecone and sidepod",
+   "notes": ""
+  },
+  {
+   "id": "AE_A07_T001",
+   "subteam": "Aerodynamics",
+   "title": "Choose Radiatior Location Based on CFD",
+   "assembly": "CFD",
+   "assemblyCode": "A07",
+   "start": "2026-08-24",
+   "due": "2026-09-24",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Helen Laird"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Radiator location selected",
+   "notes": ""
+  },
+  {
+   "id": "ER_A01_T001",
+   "subteam": "Ergonomics",
+   "title": "Ergo mockup points identified",
+   "assembly": "Ergonomics",
+   "assemblyCode": "A01",
+   "start": "2026-09-07",
+   "due": "2026-09-30",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "James King"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A01_T002",
+   "subteam": "Ergonomics",
+   "title": "Gather Whole System Driver Load Data Points",
+   "assembly": "Ergonomics",
+   "assemblyCode": "A01",
+   "start": "2026-09-01",
+   "due": "2026-09-12",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "James King"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A01_T003",
+   "subteam": "Ergonomics",
+   "title": "Put Linpots on ARG26",
+   "assembly": "Ergonomics",
+   "assemblyCode": "A01",
+   "start": "2026-08-31",
+   "due": "2026-08-31",
+   "status": "Planned",
+   "milestoneId": "",
+   "owners": [
+    "James King"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A01_T004",
+   "subteam": "Ergonomics",
+   "title": "Get Driver Max Loads",
+   "assembly": "Ergonomics",
+   "assemblyCode": "A01",
+   "start": "2026-08-31",
+   "due": "2026-09-02",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "James King"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A02_T001",
+   "subteam": "Ergonomics",
+   "title": "Rack and Pinion Decided",
+   "assembly": "Steering",
+   "assemblyCode": "A02",
+   "start": "2026-09-01",
+   "due": "2026-09-30",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "James King"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A02_T002",
+   "subteam": "Ergonomics",
+   "title": "Insert Steering column",
+   "assembly": "Steering",
+   "assemblyCode": "A02",
+   "start": "2027-01-14",
+   "due": "2027-01-16",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "James King"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A03_T001",
+   "subteam": "Ergonomics",
+   "title": "Pedal Ajustability Decided",
+   "assembly": "Pedals",
+   "assemblyCode": "A03",
+   "start": "2026-09-01",
+   "due": "2026-09-12",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Cameron Harvey"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A03_T002",
+   "subteam": "Ergonomics",
+   "title": "Insert pedals",
+   "assembly": "Pedals",
+   "assemblyCode": "A03",
+   "start": "2027-01-15",
+   "due": "2027-01-17",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Cameron Harvey"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A03_T003",
+   "subteam": "Ergonomics",
+   "title": "Determine Lockup force",
+   "assembly": "Pedals",
+   "assemblyCode": "A03",
+   "start": "",
+   "due": "",
+   "status": "",
+   "milestoneId": "",
+   "owners": [
+    "Cameron Harvey"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A03_T004",
+   "subteam": "Ergonomics",
+   "title": "Order Tilton Prodcuts for pedals",
+   "assembly": "Pedals",
+   "assemblyCode": "A03",
+   "start": "",
+   "due": "",
+   "status": "",
+   "milestoneId": "",
+   "owners": [
+    "Cameron Harvey"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A04_T001",
+   "subteam": "Ergonomics",
+   "title": "Drivers Molds Taken",
+   "assembly": "Seat",
+   "assemblyCode": "A04",
+   "start": "2026-10-18",
+   "due": "2026-10-24",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "James King"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A04_T002",
+   "subteam": "Ergonomics",
+   "title": "Driver Seat Scans in CAD",
+   "assembly": "Seat",
+   "assemblyCode": "A04",
+   "start": "2026-10-25",
+   "due": "2026-10-31",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "James King"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A04_T003",
+   "subteam": "Ergonomics",
+   "title": "Seat Upper Constraint Solution",
+   "assembly": "Seat",
+   "assemblyCode": "A04",
+   "start": "2026-09-01",
+   "due": "2026-09-30",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "James King"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A04_T004",
+   "subteam": "Ergonomics",
+   "title": "Make Plug for New Seat",
+   "assembly": "Seat",
+   "assemblyCode": "A04",
+   "start": "2026-11-16",
+   "due": "2026-11-27",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "James King"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A04_T005",
+   "subteam": "Ergonomics",
+   "title": "Layup New Driver Seat",
+   "assembly": "Seat",
+   "assemblyCode": "A04",
+   "start": "2026-11-30",
+   "due": "2026-12-11",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "James King"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A05_T001",
+   "subteam": "Ergonomics",
+   "title": "Order Firewall/Backups",
+   "assembly": "Firewall",
+   "assemblyCode": "A05",
+   "start": "2026-12-11",
+   "due": "2026-12-16",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "James King"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A05_T002",
+   "subteam": "Ergonomics",
+   "title": "Mount Firewall",
+   "assembly": "Firewall",
+   "assemblyCode": "A05",
+   "start": "2027-01-18",
+   "due": "2027-01-18",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "James King"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A06_T001",
+   "subteam": "Ergonomics",
+   "title": "Mount Head Restraint",
+   "assembly": "Head Restraint",
+   "assemblyCode": "A06",
+   "start": "2027-01-17",
+   "due": "2027-01-18",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "James King"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "ER_A06_T002",
+   "subteam": "Ergonomics",
+   "title": "Decide on mounting method of Head Restraint",
+   "assembly": "Head Restraint",
+   "assemblyCode": "A06",
+   "start": "2026-09-07",
+   "due": "2026-09-30",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "James King"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T001",
+   "subteam": "Monocoque",
+   "title": "Ordering Composite Materials",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-07-27",
+   "due": "2026-08-14",
+   "status": "In Progress",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Low",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T003",
+   "subteam": "Monocoque",
+   "title": "Select foam and plug manufacturing process",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-08-30",
+   "due": "2026-08-31",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Documented foam/plug process and manufacturing location",
+   "notes": "Decide in-house vs. Woodward and old vs. new plugs."
+  },
+  {
+   "id": "MO_A01_T004",
+   "subteam": "Monocoque",
+   "title": "Trial mold gel coat process",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-09-03",
+   "due": "2026-09-03",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "Gel coat trial results",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T005",
+   "subteam": "Monocoque",
+   "title": "Pre-process plug with Dolphin Glaze or selected filler",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-09-07",
+   "due": "2026-09-14",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Prepared plug surface",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T006",
+   "subteam": "Monocoque",
+   "title": "Receive carbon materials",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-09-07",
+   "due": "2026-09-07",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Carbon available for layups",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T007",
+   "subteam": "Monocoque",
+   "title": "Print drilling and assembly jigs",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-10-22",
+   "due": "2026-11-01",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Printed jigs",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T008",
+   "subteam": "Monocoque",
+   "title": "Cut Delrin jig rods",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-10-23",
+   "due": "2026-11-01",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Cut Delrin rods",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T009",
+   "subteam": "Monocoque",
+   "title": "Source all jigging materials for monocoque holes",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-10-16",
+   "due": "2026-10-24",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Complete jigging material kit",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T010",
+   "subteam": "Monocoque",
+   "title": "Order drill-bushing stock",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-10-25",
+   "due": "2026-10-25",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Drill-bushing stock ordered",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T011",
+   "subteam": "Monocoque",
+   "title": "Drill monocoque holes using jigs",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-11-01",
+   "due": "2026-11-03",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Monocoque holes drilled to jig",
+   "notes": "Assumes continuous labor support."
+  },
+  {
+   "id": "MO_A01_T012",
+   "subteam": "Monocoque",
+   "title": "Finish new-plug-to-post-process sequence",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-10-19",
+   "due": "2026-11-04",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Post-processed plug",
+   "notes": "Calendar indicates a 16-day duration."
+  },
+  {
+   "id": "MO_A01_T013",
+   "subteam": "Monocoque",
+   "title": "Manufacture all drill bushings",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-11-06",
+   "due": "2026-11-06",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Completed drill bushings",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T014",
+   "subteam": "Monocoque",
+   "title": "Prepare all materials for mold manufacturing",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-11-07",
+   "due": "2026-11-07",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Mold manufacturing material kit",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T015",
+   "subteam": "Monocoque",
+   "title": "Complete puck development",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-11-08",
+   "due": "2026-11-08",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Puck design/manufacturing progress",
+   "notes": "Calendar note is tentative."
+  },
+  {
+   "id": "MO_A01_T016",
+   "subteam": "Monocoque",
+   "title": "Finish plug preparation",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-11-11",
+   "due": "2026-11-11",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Plug ready for mold manufacture",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T017",
+   "subteam": "Monocoque",
+   "title": "Attempt wet-layup mold if ahead of schedule",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-11-14",
+   "due": "2026-11-15",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Low",
+   "dependsOn": [],
+   "deliverable": "Optional wet-layup mold trial",
+   "notes": "Stretch task; potentially both molds."
+  },
+  {
+   "id": "MO_A01_T018",
+   "subteam": "Monocoque",
+   "title": "Release first mold",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-11-19",
+   "due": "2026-11-19",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "First mold released",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T019",
+   "subteam": "Monocoque",
+   "title": "Prepare everything required for mold layup",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-11-30",
+   "due": "2026-11-30",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Mold layup readiness sign-off",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T020",
+   "subteam": "Monocoque",
+   "title": "Post-process molds",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-12-02",
+   "due": "2026-12-02",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Post-processed molds",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T021",
+   "subteam": "Monocoque",
+   "title": "Prepare molds, oven, carbon kits, and tooling for JanMan",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2027-01-04",
+   "due": "2027-01-06",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "JanMan manufacturing readiness",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T022",
+   "subteam": "Monocoque",
+   "title": "Lay up first monocoque skin",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2027-01-07",
+   "due": "2027-01-09",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "First skin laid up",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T023",
+   "subteam": "Monocoque",
+   "title": "Complete first cure and oven cycle",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2027-01-10",
+   "due": "2027-01-10",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "First skin cured",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T024",
+   "subteam": "Monocoque",
+   "title": "Install and bond core",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2027-01-11",
+   "due": "2027-01-13",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Core installed",
+   "notes": "SES due date uncertainty noted on Jan. 12."
+  },
+  {
+   "id": "MO_A01_T025",
+   "subteam": "Monocoque",
+   "title": "Lay up second monocoque skin",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2027-01-14",
+   "due": "2027-01-16",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Second skin laid up",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T026",
+   "subteam": "Monocoque",
+   "title": "Complete final cure",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2027-01-17",
+   "due": "2027-01-17",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Monocoque fully cured",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T027",
+   "subteam": "Monocoque",
+   "title": "Support powertrain integration",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2027-02-07",
+   "due": "2027-02-07",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Powertrain integration support complete",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T028",
+   "subteam": "Monocoque",
+   "title": "ANSYS 3 point bend test model",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-07-27",
+   "due": "2026-08-07",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "model that can be easily tested for new data",
+   "notes": ""
+  },
+  {
+   "id": "MO_A01_T029",
+   "subteam": "Monocoque",
+   "title": "ANSYS Twist Test",
+   "assembly": "Monocoque",
+   "assemblyCode": "A01",
+   "start": "2026-07-27",
+   "due": "2026-08-24",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "MO_A02_T001",
+   "subteam": "Monocoque",
+   "title": "Finalize monocoque CAD with points",
+   "assembly": "MO Geometry",
+   "assemblyCode": "A02",
+   "start": "2026-09-01",
+   "due": "2026-10-19",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "Updated monocoque CAD",
+   "notes": ""
+  },
+  {
+   "id": "MO_A02_T002",
+   "subteam": "Monocoque",
+   "title": "Update new monocoque CAD geometry",
+   "assembly": "MO Geometry",
+   "assemblyCode": "A02",
+   "start": "2026-08-24",
+   "due": "2026-09-30",
+   "status": "In Progress",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "Updated CAD geometry",
+   "notes": "No-redesign schedule assumes geometry changes remain limited."
+  },
+  {
+   "id": "MO_A02_T003",
+   "subteam": "Monocoque",
+   "title": "Lock monocoque CAD points",
+   "assembly": "MO Geometry",
+   "assemblyCode": "A02",
+   "start": "2026-10-19",
+   "due": "2026-10-19",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Katherine Collard"
+   ],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Locked monocoque reference points",
+   "notes": ""
+  },
+  {
+   "id": "MO_A05_T001",
+   "subteam": "Monocoque",
+   "title": "Ply Schedule Testing",
+   "assembly": "SES and Ply Schedules",
+   "assemblyCode": "A05",
+   "start": "",
+   "due": "",
+   "status": "",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "MO_A05_T002",
+   "subteam": "Monocoque",
+   "title": "Consult professional about laminates",
+   "assembly": "SES and Ply Schedules",
+   "assemblyCode": "A05",
+   "start": "2026-08-11",
+   "due": "2026-08-31",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Material testing guidance and action items",
+   "notes": ""
+  },
+  {
+   "id": "MO_A05_T003",
+   "subteam": "Monocoque",
+   "title": "Run ANSYS twist-test ply schedule study",
+   "assembly": "SES and Ply Schedules",
+   "assemblyCode": "A05",
+   "start": "2026-08-13",
+   "due": "2026-09-11",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "Low",
+   "dependsOn": [],
+   "deliverable": "Twist-test ply schedule results",
+   "notes": ""
+  },
+  {
+   "id": "MO_A05_T004",
+   "subteam": "Monocoque",
+   "title": "Analyze panel test results",
+   "assembly": "SES and Ply Schedules",
+   "assemblyCode": "A05",
+   "start": "2026-09-19",
+   "due": "2026-09-19",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Analyzed panel results and recommendations",
+   "notes": ""
+  },
+  {
+   "id": "MO_A05_T005",
+   "subteam": "Monocoque",
+   "title": "Complete additional test-panel round",
+   "assembly": "SES and Ply Schedules",
+   "assemblyCode": "A05",
+   "start": "2026-09-27",
+   "due": "2026-10-04",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Additional panel test results",
+   "notes": "Calendar notes another panel round; one-week window assumed."
+  },
+  {
+   "id": "MO_A05_T006",
+   "subteam": "Monocoque",
+   "title": "Complete SES work session",
+   "assembly": "SES and Ply Schedules",
+   "assemblyCode": "A05",
+   "start": "2026-11-05",
+   "due": "2026-11-05",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Updated SES package",
+   "notes": ""
+  },
+  {
+   "id": "MO_A05_T007",
+   "subteam": "Monocoque",
+   "title": "Continue test panels and SES documentation",
+   "assembly": "SES and Ply Schedules",
+   "assemblyCode": "A05",
+   "start": "2026-11-09",
+   "due": "2026-11-10",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Updated SES test evidence",
+   "notes": ""
+  },
+  {
+   "id": "MO_A05_T008",
+   "subteam": "Monocoque",
+   "title": "Lock final ply schedules",
+   "assembly": "SES and Ply Schedules",
+   "assemblyCode": "A05",
+   "start": "2026-09-30",
+   "due": "2026-11-20",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Released ply schedule",
+   "notes": ""
+  },
+  {
+   "id": "MO_A05_T009",
+   "subteam": "Monocoque",
+   "title": "Submit SES package",
+   "assembly": "SES and Ply Schedules",
+   "assemblyCode": "A05",
+   "start": "2026-12-01",
+   "due": "2026-12-01",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "Critical",
+   "dependsOn": [],
+   "deliverable": "Submitted SES package",
+   "notes": ""
+  },
+  {
+   "id": "MO_A05_T010",
+   "subteam": "Monocoque",
+   "title": "Test Panel Jigs and Elastic Modulus",
+   "assembly": "SES and Ply Schedules",
+   "assemblyCode": "A05",
+   "start": "2026-08-17",
+   "due": "2026-08-21",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "1. Have 3 pt bending jig 2. Have an elastic modulus tested thats rules compliant 3. test T1100 4. Other testing jigs (1-2 must be done)",
+   "notes": ""
+  },
+  {
+   "id": "SU_A01_T001",
+   "subteam": "Suspension",
+   "title": "Run ARG26 CG Test",
+   "assembly": "Suspension",
+   "assemblyCode": "A01",
+   "start": "2026-08-31",
+   "due": "2026-09-05",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Davis Rattanavijai"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": "Very very valuable information"
+  },
+  {
+   "id": "SU_A01_T002",
+   "subteam": "Suspension",
+   "title": "GRIND KINEMATIC POINTS",
+   "assembly": "Suspension",
+   "assemblyCode": "A01",
+   "start": "2026-09-06",
+   "due": "2026-09-13",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Davis Rattanavijai"
+   ],
+   "priority": "",
+   "dependsOn": [
+    "SU_A01_T003"
+   ],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A01_T003",
+   "subteam": "Suspension",
+   "title": "Gather Design Necessary Car Data",
+   "assembly": "Suspension",
+   "assemblyCode": "A01",
+   "start": "2026-09-05",
+   "due": "2026-09-19",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Davis Rattanavijai"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": "Max lateral, longitudinal acceleration and more to come"
+  },
+  {
+   "id": "SU_A01_T004",
+   "subteam": "Suspension",
+   "title": "test task",
+   "assembly": "Suspension",
+   "assemblyCode": "A01",
+   "start": "",
+   "due": "",
+   "status": "",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A02_T001",
+   "subteam": "Suspension",
+   "title": "Links manufacturing",
+   "assembly": "Links",
+   "assemblyCode": "A02",
+   "start": "2026-11-01",
+   "due": "2027-01-15",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Daniel Wtorkowski"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A02_T002",
+   "subteam": "Suspension",
+   "title": "Calculate Link Dimensions (Length, OD and Wall thickness)",
+   "assembly": "Links",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Daniel Wtorkowski"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A02_T003",
+   "subteam": "Suspension",
+   "title": "First Round CAD of links and adapters",
+   "assembly": "Links",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Daniel Wtorkowski"
+   ],
+   "priority": "Medium",
+   "dependsOn": [
+    "SU_A01_T002"
+   ],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A02_T004",
+   "subteam": "Suspension",
+   "title": "Optimize Upper Adapter Geometry",
+   "assembly": "Links",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Daniel Wtorkowski"
+   ],
+   "priority": "Medium",
+   "dependsOn": [
+    "SU_A02_T003"
+   ],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A02_T005",
+   "subteam": "Suspension",
+   "title": "Order rod ends, bearings, tube stock from McMaster",
+   "assembly": "Links",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Daniel Wtorkowski"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A02_T006",
+   "subteam": "Suspension",
+   "title": "Order adapters from ZTL",
+   "assembly": "Links",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Daniel Wtorkowski"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A02_T007",
+   "subteam": "Suspension",
+   "title": "Machine Inserts",
+   "assembly": "Links",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Daniel Wtorkowski"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A02_T008",
+   "subteam": "Suspension",
+   "title": "Manufacture push links for strain gauge installation as well as spares",
+   "assembly": "Links",
+   "assemblyCode": "A02",
+   "start": "",
+   "due": "",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Daniel Wtorkowski"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A03_T001",
+   "subteam": "Suspension",
+   "title": "Clevises manufacturing",
+   "assembly": "Clevises",
+   "assemblyCode": "A03",
+   "start": "2026-11-01",
+   "due": "2027-01-15",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A03_T002",
+   "subteam": "Suspension",
+   "title": "Devcon Clevises",
+   "assembly": "Clevises",
+   "assemblyCode": "A03",
+   "start": "2027-01-21",
+   "due": "2027-01-22",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A04_T001",
+   "subteam": "Suspension",
+   "title": "Rockers outsourced",
+   "assembly": "Rockers",
+   "assemblyCode": "A04",
+   "start": "2026-11-01",
+   "due": "2027-01-15",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Aarian Mepani"
+   ],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A05_T001",
+   "subteam": "Suspension",
+   "title": "Lock down ARB architecture",
+   "assembly": "Anti-Roll",
+   "assemblyCode": "A05",
+   "start": "",
+   "due": "2026-09-21",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Alice Jones"
+   ],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "Decide on ARB front and rear architecture",
+   "notes": ""
+  },
+  {
+   "id": "SU_A05_T002",
+   "subteam": "Suspension",
+   "title": "First ARB CAD pass",
+   "assembly": "Anti-Roll",
+   "assemblyCode": "A05",
+   "start": "",
+   "due": "2026-09-28",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Alice Jones"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "Have an initial CAD assembly ready for PDR",
+   "notes": ""
+  },
+  {
+   "id": "SU_A05_T003",
+   "subteam": "Suspension",
+   "title": "Refine torsion bar sizing, Optimise blade geometry, Validate stiffness targets",
+   "assembly": "Anti-Roll",
+   "assemblyCode": "A05",
+   "start": "2026-09-28",
+   "due": "2026-10-24",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Alice Jones"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A05_T004",
+   "subteam": "Suspension",
+   "title": "Design ARB Mounts and Adapters",
+   "assembly": "Anti-Roll",
+   "assemblyCode": "A05",
+   "start": "2026-10-10",
+   "due": "2026-10-24",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Alice Jones"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A05_T005",
+   "subteam": "Suspension",
+   "title": "ARB CAD Freeze",
+   "assembly": "Anti-Roll",
+   "assemblyCode": "A05",
+   "start": "2026-10-24",
+   "due": "2026-11-05",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Alice Jones"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": "Straight After FDR"
+  },
+  {
+   "id": "SU_A05_T006",
+   "subteam": "Suspension",
+   "title": "Place orders for outsourced ARB components",
+   "assembly": "Anti-Roll",
+   "assemblyCode": "A05",
+   "start": "2026-11-05",
+   "due": "2026-11-08",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Alice Jones"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A05_T007",
+   "subteam": "Suspension",
+   "title": "Manufacture 50% of in-house ARB components",
+   "assembly": "Anti-Roll",
+   "assemblyCode": "A05",
+   "start": "2026-11-08",
+   "due": "2026-12-13",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Alice Jones"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A05_T008",
+   "subteam": "Suspension",
+   "title": "Complete remaining ARB machining",
+   "assembly": "Anti-Roll",
+   "assemblyCode": "A05",
+   "start": "2027-01-01",
+   "due": "2027-01-15",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Alice Jones"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A05_T009",
+   "subteam": "Suspension",
+   "title": "Assemble complete ARB",
+   "assembly": "Anti-Roll",
+   "assemblyCode": "A05",
+   "start": "2027-01-15",
+   "due": "2027-01-18",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Alice Jones"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "SU_A05_T010",
+   "subteam": "Suspension",
+   "title": "Integrate ARB onto chassis with other suspension components",
+   "assembly": "Anti-Roll",
+   "assemblyCode": "A05",
+   "start": "2027-01-18",
+   "due": "2027-01-24",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [
+    "Alice Jones"
+   ],
+   "priority": "Medium",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "BU_A01_T001",
+   "subteam": "Business",
+   "title": "Professonally Wrap Car",
+   "assembly": "Business",
+   "assemblyCode": "A01",
+   "start": "2027-02-12",
+   "due": "2027-02-15",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "BU_A01_T003",
+   "subteam": "Business",
+   "title": "Finalize Comp Documents",
+   "assembly": "Business",
+   "assemblyCode": "A01",
+   "start": "2027-05-01",
+   "due": "2027-05-05",
+   "status": "",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "BU_A02_T001",
+   "subteam": "Business",
+   "title": "Publish Purchasing sheet",
+   "assembly": "Purchasing",
+   "assemblyCode": "A02",
+   "start": "2026-08-28",
+   "due": "2026-08-30",
+   "status": "In Progress",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "High",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "BU_A03_T001",
+   "subteam": "Business",
+   "title": "Upperclassmen Delibs 1",
+   "assembly": "Recruitment",
+   "assemblyCode": "A03",
+   "start": "2026-09-08",
+   "due": "2026-09-08",
+   "status": "Not Started",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "BU_A03_T002",
+   "subteam": "Business",
+   "title": "Upperclassmen interviews",
+   "assembly": "Recruitment",
+   "assemblyCode": "A03",
+   "start": "2026-09-06",
+   "due": "2026-09-14",
+   "status": "",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "BU_A03_T003",
+   "subteam": "Business",
+   "title": "Project Team Fest",
+   "assembly": "Recruitment",
+   "assemblyCode": "A03",
+   "start": "",
+   "due": "2026-09-01",
+   "status": "Complete",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "BU_A03_T004",
+   "subteam": "Business",
+   "title": "Info Session 1",
+   "assembly": "Recruitment",
+   "assemblyCode": "A03",
+   "start": "",
+   "due": "2026-09-02",
+   "status": "Complete",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "BU_A03_T005",
+   "subteam": "Business",
+   "title": "Info Session 2",
+   "assembly": "Recruitment",
+   "assemblyCode": "A03",
+   "start": "",
+   "due": "2026-09-15",
+   "status": "",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "BU_A03_T006",
+   "subteam": "Business",
+   "title": "Info Session 3",
+   "assembly": "Recruitment",
+   "assemblyCode": "A03",
+   "start": "",
+   "due": "2026-09-21",
+   "status": "",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "BU_A03_T007",
+   "subteam": "Business",
+   "title": "Info Session 4",
+   "assembly": "Recruitment",
+   "assemblyCode": "A03",
+   "start": "",
+   "due": "2026-10-07",
+   "status": "",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "BU_A03_T008",
+   "subteam": "Business",
+   "title": "First Year Delibs 1",
+   "assembly": "Recruitment",
+   "assemblyCode": "A03",
+   "start": "2026-10-17",
+   "due": "2026-10-18",
+   "status": "",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "BU_A03_T009",
+   "subteam": "Business",
+   "title": "Upperclassmen Final Delibs",
+   "assembly": "Recruitment",
+   "assemblyCode": "A03",
+   "start": "2026-10-12",
+   "due": "2026-10-13",
+   "status": "",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "BU_A03_T010",
+   "subteam": "Business",
+   "title": "First Year Interviews",
+   "assembly": "Recruitment",
+   "assemblyCode": "A03",
+   "start": "2026-10-20",
+   "due": "2026-10-27",
+   "status": "",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "BU_A03_T011",
+   "subteam": "Business",
+   "title": "First Year Final Delibs",
+   "assembly": "Recruitment",
+   "assemblyCode": "A03",
+   "start": "2026-10-31",
+   "due": "2026-11-01",
+   "status": "",
+   "milestoneId": "",
+   "owners": [],
+   "priority": "",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  },
+  {
+   "id": "BU_A06_T001",
+   "subteam": "Business",
+   "title": "Finalize website",
+   "assembly": "Website",
+   "assemblyCode": "A06",
+   "start": "2026-08-24",
+   "due": "2026-08-27",
+   "status": "Complete",
+   "milestoneId": "",
+   "owners": [
+    "Sayee Edekar"
+   ],
+   "priority": "Low",
+   "dependsOn": [],
+   "deliverable": "",
+   "notes": ""
+  }
+ ]
+}
