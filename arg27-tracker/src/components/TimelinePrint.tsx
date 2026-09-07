@@ -36,10 +36,12 @@ import { IconClose } from './icons'
 const PAD = 32
 const LABEL_W = 190
 const ROW_H = 30
-const LANE_MIN = 66
+const LANE_MIN = 68
 
-/** Roughly the advance width of the 13px caption face. */
-const CHAR_W = 6.8
+/** Roughly the advance width of the 14px medium caption face. Kept in step
+ *  with the type below — undersize it and the packer reserves too little room,
+ *  and the captions start colliding again. */
+const CHAR_W = 7.7
 
 type Ratio = 'letter' | 'slide169' | 'slide43' | 'portrait'
 
@@ -86,13 +88,32 @@ const RATIOS: {
   },
 ]
 
-type Format = 'png2' | 'png3' | 'svg'
+type Format = 'png2' | 'png3' | 'png4' | 'png6' | 'png8' | 'svg'
 
-const FORMATS: { value: Format; label: string; scale: number }[] = [
-  { value: 'png2', label: 'PNG · 2×', scale: 2 },
-  { value: 'png3', label: 'PNG · 3× (poster)', scale: 3 },
-  { value: 'svg', label: 'SVG · vector', scale: 1 },
+const FORMATS: { value: Format; note: string; scale: number }[] = [
+  { value: 'png2', note: 'screen', scale: 2 },
+  { value: 'png3', note: 'print', scale: 3 },
+  { value: 'png4', note: 'large print', scale: 4 },
+  { value: 'png6', note: 'poster', scale: 6 },
+  { value: 'png8', note: 'max', scale: 8 },
+  { value: 'svg', note: 'vector, any size', scale: 1 },
 ]
+
+/**
+ * Canvas has a hard ceiling — Chrome refuses much beyond 268M pixels and simply
+ * hands back a blank bitmap rather than an error. Stay clear of it, and tell
+ * the reader when a multiple has been clamped instead of silently under-
+ * delivering the resolution they picked.
+ */
+const MAX_PIXELS = 240_000_000
+const MAX_SIDE = 16_000
+
+function fit(w: number, h: number, scale: number) {
+  const capped = Math.min(scale, MAX_SIDE / w, MAX_SIDE / h, Math.sqrt(MAX_PIXELS / (w * h)))
+  // Round down to a sensible step so the label never reads "3.87x".
+  const usable = Math.max(1, Math.floor(capped * 10) / 10)
+  return { scale: usable, clamped: usable < scale - 0.05 }
+}
 
 type Ink = 'status' | 'priority' | 'group' | 'mono'
 
@@ -123,6 +144,8 @@ export function TimelinePrint({
   const [format, setFormat] = useState<Format>('png2')
   const [saving, setSaving] = useState(false)
   const [saveError, setSaveError] = useState<string | null>(null)
+  /** Measured height of the paper shapes, whose sheet grows with its content. */
+  const [sheetH, setSheetH] = useState(0)
   const now = today()
 
   const shape = RATIOS.find((r) => r.value === ratio)!
@@ -176,7 +199,7 @@ export function TimelinePrint({
       .sort((a, b) => a.due.localeCompare(b.due))
       .map((m) => {
         const x = xOf(m.due) - 6
-        const labelW = labelWidth(m.title, CHAR_W, 280)
+        const labelW = labelWidth(m.title, CHAR_W * 1.12, 320)
         // The diamond is 12px wide; the caption sits beside it.
         const { flip, left, right } = span(x, 12, labelW, chartW, 6)
         let row = ends.findIndex((end) => end <= left)
@@ -226,6 +249,10 @@ export function TimelinePrint({
     setScale(contentW / layoutW)
   }, [layoutW, shape.h, shape.w, contentW, lanes, msRows, ink])
 
+  useLayoutEffect(() => {
+    setSheetH(sheetRef.current?.offsetHeight ?? 0)
+  }, [shape.h, shape.w, layoutW, scale, lanes, ink])
+
   const laneIndex = useMemo(
     () => new Map(lanes.filter((l) => l.name !== MS_LANE).map((l, i) => [l.name, i])),
     [lanes],
@@ -243,6 +270,45 @@ export function TimelinePrint({
    * it is simply not in the captured node. The sheet has a fixed pixel size, so
    * the export is exactly the shape on screen at the chosen multiple.
    */
+  /**
+   * The page loads Mulish from Google Fonts. The renderer cannot read that
+   * stylesheet through the CSSOM — it is cross-origin, so `cssRules` throws —
+   * which is what made the first attempt hang. Fetching the same URL is
+   * allowed, though, so pull the CSS and inline the woff2 files by hand. Without
+   * this the export silently falls back to a system face and stops matching
+   * what is on screen.
+   */
+  const fontCss = useRef<string | null>(null)
+  const embedFonts = async () => {
+    if (fontCss.current !== null) return fontCss.current
+    try {
+      const sheets = [...document.querySelectorAll('link[rel=stylesheet]')]
+        .map((l) => (l as HTMLLinkElement).href)
+        .filter((h) => h.includes('fonts.googleapis.com'))
+      let css = ''
+      for (const href of sheets) {
+        let text = await fetch(href).then((r) => r.text())
+        for (const url of [...text.matchAll(/url\((https:\/\/[^)]+)\)/g)].map((m) => m[1])) {
+          const bytes = await fetch(url).then((r) => r.arrayBuffer())
+          const buf = new Uint8Array(bytes as ArrayBuffer)
+          // Chunked, because spreading a whole font into btoa overflows the stack.
+          let bin = ''
+          for (let i = 0; i < buf.length; i += 8192)
+            bin += String.fromCharCode(...buf.subarray(i, i + 8192))
+          text = text.replace(url, `data:font/woff2;base64,${btoa(bin)}`)
+        }
+        css += text
+      }
+      fontCss.current = css
+      return css
+    } catch {
+      // Offline, or the font host is blocked. Export in the fallback face
+      // rather than failing outright.
+      fontCss.current = ''
+      return ''
+    }
+  }
+
   const saveImage = async () => {
     const node = sheetRef.current
     if (!node || saving) return
@@ -250,17 +316,21 @@ export function TimelinePrint({
     setSaveError(null)
     try {
       const spec = FORMATS.find((f) => f.value === format)!
+      const out = outputFor(spec.scale)
       const who = (isAllTeams ? 'all-subteams' : subteam).toLowerCase().replace(/\s+/g, '-')
       const name = `ARG27-${who}-timeline-${toISO(now)}`
-      // skipFonts: the sheet is set in the system stack, so there is no webfont
-      // worth inlining — and fetching every stylesheet to look for one is what
-      // made this hang. The renderer has no timeout of its own, so add one:
-      // a silent stall with the button stuck on "Saving…" is the worst outcome.
-      const opts = { backgroundColor: '#ffffff', skipFonts: true }
+      const embedded = await embedFonts()
+      // Supplying the CSS ourselves keeps the renderer from walking the
+      // stylesheets, which is both the hang and the wrong-typeface fix. The
+      // renderer has no timeout of its own, so add one below: a silent stall
+      // with the button stuck on "Saving…" is the worst outcome.
+      const opts = embedded
+        ? { backgroundColor: '#ffffff', fontEmbedCSS: embedded }
+        : { backgroundColor: '#ffffff', skipFonts: true }
       const render =
         spec.value === 'svg'
           ? toSvg(node, opts)
-          : toBlob(node, { ...opts, pixelRatio: spec.scale }).then((b) => {
+          : toBlob(node, { ...opts, pixelRatio: out.scale }).then((b) => {
               if (!b) throw new Error('the renderer produced nothing')
               return URL.createObjectURL(b)
             })
@@ -280,6 +350,14 @@ export function TimelinePrint({
     } finally {
       setSaving(false)
     }
+  }
+
+  /** Output size for a given multiple, clamped to what canvas will actually do. */
+  const outputFor = (scale: number) => {
+    const w = shape.w
+    const h = shape.h || sheetH || shape.w * 0.75
+    const f = fit(w, h, scale)
+    return { ...f, w: Math.round(w * f.scale), h: Math.round(h * f.scale) }
   }
 
   const months = monthsBetween(range.from, range.to)
@@ -326,7 +404,14 @@ export function TimelinePrint({
           <Select
             value={format}
             onChange={(e) => setFormat(e.target.value as Format)}
-            options={FORMATS.map((f) => ({ value: f.value, label: f.label }))}
+            options={FORMATS.map((f) => {
+              if (f.value === 'svg') return { value: f.value, label: `SVG · ${f.note}` }
+              const o = outputFor(f.scale)
+              return {
+                value: f.value,
+                label: `PNG ${f.scale}× · ${o.w}×${o.h}${o.clamped ? ' (capped)' : ''} · ${f.note}`,
+              }
+            })}
             className="text-[#14171c]"
           />
           <Button onClick={saveImage} disabled={saving} title={saveError ?? undefined}>
@@ -383,7 +468,7 @@ export function TimelinePrint({
                     return (
                       <div key={+m} className="absolute top-0 h-6" style={{ left: x }}>
                         <div className="h-full w-px bg-[#d4d1ca]" />
-                        <span className="absolute top-0.5 left-1.5 text-[11px] font-medium whitespace-nowrap text-[#6b7280]">
+                        <span className="absolute top-0.5 left-1.5 text-[12px] font-semibold whitespace-nowrap text-[#5b6068]">
                           {fmtMonth(m)}
                         </span>
                       </div>
@@ -398,12 +483,12 @@ export function TimelinePrint({
                     className="shrink-0 border-r border-[#e4e1db] py-2 pr-3"
                     style={{ width: LABEL_W }}
                   >
-                    <div className="text-[10px] tracking-wide text-[#9aa0a8] uppercase">
+                    <div className="text-[11px] font-medium tracking-wide text-[#8b9098] uppercase">
                       {lane.name === MS_LANE
                         ? `${lane.milestones.length} deadlines`
                         : `${groupCode(ds, lane.name)} · ${lane.bars.length} tasks`}
                     </div>
-                    <div className="mt-0.5 text-[14px] leading-tight font-semibold text-[#14171c]">
+                    <div className="mt-0.5 text-[15px] leading-tight font-bold text-[#14171c]">
                       {lane.name}
                     </div>
                   </div>
@@ -464,7 +549,7 @@ export function TimelinePrint({
                             }}
                           />
                           <span
-                            className="text-[13px] leading-tight whitespace-nowrap text-[#31363d]"
+                            className="text-[14px] leading-tight font-medium whitespace-nowrap text-[#272c33]"
                             style={{ maxWidth: labelW }}
                           >
                             {item.title}
@@ -489,7 +574,7 @@ export function TimelinePrint({
                               background: ink === 'mono' ? '#14171c' : STATUS_COLOR[statusOf(m)],
                             }}
                           />
-                          <span className="text-[13px] font-semibold whitespace-nowrap text-[#14171c]">
+                          <span className="text-[15px] font-bold whitespace-nowrap text-[#14171c]">
                             {m.title}
                           </span>
                         </div>
@@ -503,7 +588,7 @@ export function TimelinePrint({
 
           <footer
             ref={footRef}
-            className="mt-3 flex items-center justify-between text-[10px] text-[#9aa0a8]"
+            className="mt-3 flex items-center justify-between text-[11px] text-[#8b9098]"
           >
             <span>◆ milestone · ▬ task · red rule = today · dashed = competition</span>
             <span>{ds.meta.source}</span>
