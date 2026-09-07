@@ -58,11 +58,14 @@ const RATIOS: {
   h: number
   page: string
 }[] = [
+  // Letter landscape is 11x8.5. Letting the content set the height made this
+  // shape come out near-square (1040x1009), so exporting with the default and
+  // dropping it on a 16:9 slide gave a letterboxed mess.
   {
     value: 'letter',
     label: 'Paper · landscape',
     w: 1040,
-    h: 0,
+    h: 804,
     page: 'landscape',
   },
   {
@@ -83,7 +86,7 @@ const RATIOS: {
     value: 'portrait',
     label: 'Paper · portrait',
     w: 800,
-    h: 0,
+    h: 1035,
     page: 'portrait',
   },
 ]
@@ -96,7 +99,11 @@ const FORMATS: { value: Format; note: string; scale: number }[] = [
   { value: 'png4', note: 'large print', scale: 4 },
   { value: 'png6', note: 'poster', scale: 6 },
   { value: 'png8', note: 'max', scale: 8 },
-  { value: 'svg', note: 'vector, any size', scale: 1 },
+  // The renderer emits a single <foreignObject> wrapping HTML rather than real
+  // SVG shapes. Browsers draw that; PowerPoint, Keynote, Google Slides,
+  // Illustrator and Inkscape all ignore it and show nothing. Labelled so nobody
+  // reaches for it expecting a vector file a deck can use.
+  { value: 'svg', note: 'web only — decks cannot read it', scale: 1 },
 ]
 
 /**
