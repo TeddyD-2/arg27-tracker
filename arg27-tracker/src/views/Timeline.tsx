@@ -24,6 +24,7 @@ import {
   Button,
   Card,
   ChartTooltip,
+  cx,
   EmptyState,
   Select,
   StatusChip,
@@ -392,7 +393,7 @@ export function Timeline({ onOpenItem }: { onOpenItem: (t: DrawerTarget) => void
                     className="relative border-b border-hairline"
                     style={{ height: lane.height }}
                   >
-                    {lane.bars.map(({ item, x, w, y, labelW }) => {
+                    {lane.bars.map(({ item, x, w, y, labelW, flip }) => {
                       const s = statusOf(item)
                       const overdue = healthOf(item, now).band === 'overdue' && !isDone(item)
                       return (
@@ -409,9 +410,15 @@ export function Timeline({ onOpenItem }: { onOpenItem: (t: DrawerTarget) => void
                           onMouseLeave={() => setHover(null)}
                           // The caption is inside the button, so a 6px bar still
                           // has a comfortable click and hover target.
-                          className="group absolute flex items-center gap-1.5"
+                          // Captions that would run past the right edge flip to
+                          // the left of their bar; the packer reserves the space
+                          // on that side so nothing collides.
+                          className={cx(
+                            'group absolute flex items-center gap-1.5',
+                            flip && 'flex-row-reverse',
+                          )}
                           style={{
-                            left: x,
+                            ...(flip ? { left: x - (labelW ? labelW + 8 : 0) } : { left: x }),
                             top: y + MS_STRIP,
                             width: w + (labelW ? labelW + 8 : 0),
                             height: ROW_H - 6,

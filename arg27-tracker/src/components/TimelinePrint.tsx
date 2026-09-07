@@ -12,7 +12,7 @@ import {
   type Priority,
   type Task,
 } from '../lib/types'
-import { buildLanes, labelWidth, MS_LANE, MS_STRIP } from '../lib/lanes'
+import { buildLanes, labelWidth, MS_LANE, MS_STRIP, span } from '../lib/lanes'
 import { Button, Select } from './ui'
 import { IconClose } from './icons'
 
@@ -106,19 +106,22 @@ export function TimelinePrint({
    */
   const msRows = useMemo(() => {
     const strip = lanes.find((l) => l.name === MS_LANE)
-    if (!strip) return { rows: [] as { m: Milestone; x: number; y: number; w: number }[], height: 0 }
+    if (!strip)
+      return { rows: [] as { m: Milestone; x: number; y: number; flip: boolean }[], height: 0 }
     const ends: number[] = []
     const rows = [...strip.milestones]
       .sort((a, b) => a.due.localeCompare(b.due))
       .map((m) => {
         const x = xOf(m.due) - 6
-        const w = labelWidth(m.title, CHAR_W, 280) + 22
-        let row = ends.findIndex((end) => end < x)
+        const labelW = labelWidth(m.title, CHAR_W, 280)
+        // The diamond is 12px wide; the caption sits beside it.
+        const { flip, left, right } = span(x, 12, labelW, chartW, 6)
+        let row = ends.findIndex((end) => end <= left)
         if (row === -1) {
-          ends.push(x + w)
+          ends.push(right)
           row = ends.length - 1
-        } else ends[row] = x + w
-        return { m, x, y: row * ROW_H, w }
+        } else ends[row] = Math.max(ends[row], right)
+        return { m, x, y: row * ROW_H, flip }
       })
     return { rows, height: Math.max(LANE_MIN, ends.length * ROW_H + 14) }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -291,11 +294,8 @@ export function TimelinePrint({
                     />
                   )}
 
-                  {lane.bars.map(({ item, x, w, y, labelW }) => {
+                  {lane.bars.map(({ item, x, w, y, labelW, flip }) => {
                     const overdue = healthOf(item, now).band === 'overdue' && !isDone(item)
-                    // Near the right edge a caption would run off the sheet, so
-                    // it flips to the left of its bar rather than being cut.
-                    const flip = x + w + 8 + labelW > chartW
                     return (
                       <div
                         key={item.id}
@@ -325,8 +325,7 @@ export function TimelinePrint({
                     )
                   })}
 
-                  {(lane.name === MS_LANE ? msRows.rows : []).map(({ m, x, y, w }) => {
-                    const flip = x + w > chartW
+                  {(lane.name === MS_LANE ? msRows.rows : []).map(({ m, x, y, flip }) => {
                     return (
                       <div
                         key={m.id}

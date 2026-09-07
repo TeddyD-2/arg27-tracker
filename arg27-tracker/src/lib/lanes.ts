@@ -30,6 +30,20 @@ export interface Bar {
   y: number
   /** 0 when the scale is too coarse to caption the bars. */
   labelW: number
+  /** Caption sits left of the bar because it would otherwise run off the edge. */
+  flip: boolean
+}
+
+/**
+ * Where a captioned mark actually sits, mark plus caption. A flipped caption
+ * extends leftwards, so the interval starts before the mark — packing has to
+ * reserve that, or the flipped label lands on whatever is already there.
+ */
+export function span(x: number, w: number, labelW: number, chartW: number, gap = 8) {
+  const flip = labelW > 0 && x + w + gap + labelW > chartW
+  const left = flip ? Math.max(0, x - gap - labelW) : x
+  const right = flip ? x + w : x + w + (labelW ? gap + labelW : 6)
+  return { flip, left, right }
 }
 
 export interface Lane {
@@ -92,13 +106,13 @@ export function buildLanes({
         // 6px minimum. The caption therefore sits beside the bar, and the row
         // packing reserves its width so captions never overlap the next bar.
         const labelW = showLabels ? labelWidth(t.title, charW, maxLabelW) : 0
-        const end = x + w + (labelW ? labelW + 8 : 6)
-        let row = rows.findIndex((r) => r.end < x)
+        const { flip, left, right } = span(x, w, labelW, chartW)
+        let row = rows.findIndex((r) => r.end <= left)
         if (row === -1) {
-          rows.push({ end })
+          rows.push({ end: right })
           row = rows.length - 1
-        } else rows[row].end = end
-        bars.push({ item: t, x, w, y: row * rowH, labelW })
+        } else rows[row].end = Math.max(rows[row].end, right)
+        bars.push({ item: t, x, w, y: row * rowH, labelW, flip })
       }
       return {
         name,
