@@ -1,0 +1,115 @@
+import { daysBetween, parseDay } from './dates'
+import type { Milestone, Task } from './types'
+
+/**
+ * Gantt layout, shared by the Timeline card and its print sheet so both lay out
+ * identically — the print sheet is the same chart at a larger scale, not a
+ * second implementation that can drift.
+ */
+
+export const ROW_H = 22
+export const LANE_PAD = 8
+/** Milestones get their own strip at the top of each lane so they never sit on a bar. */
+export const MS_STRIP = 20
+/** Tall enough for the two-line group label in the gutter. */
+export const MIN_LANE_H = 56
+/** Milestones belong to the subteam, not to one assembly, so they share a lane. */
+export const MS_LANE = 'Milestones'
+
+/** Below this density a title would be wider than the time it describes. */
+export const LABEL_MIN_PX_PER_DAY = 8
+/** Rough label width, used to reserve room when packing rows. The print sheet
+ *  sets a bigger type size, so it passes its own numbers. */
+export const labelWidth = (title: string, charW = 5.4, max = 200) =>
+  Math.min(max, title.length * charW + 8)
+
+export interface Bar {
+  item: Task
+  x: number
+  w: number
+  y: number
+  /** 0 when the scale is too coarse to caption the bars. */
+  labelW: number
+}
+
+export interface Lane {
+  name: string
+  bars: Bar[]
+  milestones: Milestone[]
+  height: number
+}
+
+export interface LaneInput {
+  tasks: Task[]
+  milestones: Milestone[]
+  range: { from: Date; to: Date }
+  chartW: number
+  totalDays: number
+  showLabels: boolean
+  /** The lane a task belongs to — its assembly, or its subteam across the program. */
+  groupOf: (t: Task) => string
+  /** Row height, so the print sheet can give each bar more air. */
+  rowH?: number
+  /** Caption metrics, so a larger type size still reserves enough room. */
+  charW?: number
+  maxLabelW?: number
+}
+
+export function buildLanes({
+  tasks,
+  milestones,
+  range,
+  chartW,
+  totalDays,
+  showLabels,
+  groupOf,
+  rowH = ROW_H,
+  charW,
+  maxLabelW,
+}: LaneInput): Lane[] {
+  const xOf = (iso: string) => (daysBetween(range.from, parseDay(iso)!) / totalDays) * chartW
+  const visible = (iso: string) => {
+    const d = parseDay(iso)
+    return !!d && d >= range.from && d <= range.to
+  }
+  const inWindow = {
+    tasks: tasks.filter((t) => visible(t.due) || visible(t.start || t.due)),
+    milestones: milestones.filter((m) => visible(m.due)),
+  }
+
+  const names = [...new Set(inWindow.tasks.map((t) => groupOf(t) || 'Unassigned'))]
+  const work = names
+    .map((name) => {
+      const mine = inWindow.tasks.filter((t) => (groupOf(t) || 'Unassigned') === name)
+      const rows: { end: number }[] = []
+      const bars: Bar[] = []
+      for (const t of [...mine].sort((a, b) =>
+        (a.start || a.due).localeCompare(b.start || b.due),
+      )) {
+        const x = xOf(t.start || t.due)
+        const w = Math.max(6, xOf(t.due) - x)
+        // Most tasks on the sheet carry only a due date, so their bars are the
+        // 6px minimum. The caption therefore sits beside the bar, and the row
+        // packing reserves its width so captions never overlap the next bar.
+        const labelW = showLabels ? labelWidth(t.title, charW, maxLabelW) : 0
+        const end = x + w + (labelW ? labelW + 8 : 6)
+        let row = rows.findIndex((r) => r.end < x)
+        if (row === -1) {
+          rows.push({ end })
+          row = rows.length - 1
+        } else rows[row].end = end
+        bars.push({ item: t, x, w, y: row * rowH, labelW })
+      }
+      return {
+        name,
+        bars,
+        milestones: [] as Milestone[],
+        height: Math.max(MIN_LANE_H, MS_STRIP + Math.max(1, rows.length) * rowH + LANE_PAD),
+      }
+    })
+    .sort((a, b) => b.bars.length - a.bars.length)
+
+  return inWindow.milestones.length
+    ? [{ name: MS_LANE, bars: [], milestones: inWindow.milestones, height: MIN_LANE_H }, ...work]
+    : work
+}

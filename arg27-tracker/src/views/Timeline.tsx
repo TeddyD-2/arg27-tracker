@@ -29,16 +29,16 @@ import {
   StatusChip,
 } from '../components/ui'
 import type { DrawerTarget } from '../components/ItemDrawer'
+import {
+  buildLanes,
+  LABEL_MIN_PX_PER_DAY,
+  MS_LANE,
+  MS_STRIP,
+  ROW_H,
+} from '../lib/lanes'
+import { TimelinePrint } from '../components/TimelinePrint'
 
-/** Milestones belong to the subteam, not to one assembly, so they share a lane. */
-const MS_LANE = 'Milestones'
-const ROW_H = 22
-const LANE_PAD = 8
 const LABEL_W = 168
-/** Milestones get their own strip at the top of each lane so they never sit on a bar. */
-const MS_STRIP = 20
-/** Tall enough for the two-line assembly label in the sticky gutter. */
-const MIN_LANE_H = 56
 
 type Zoom = 'month' | 'quarter' | 'half' | 'season' | 'all'
 
@@ -59,21 +59,6 @@ const ZOOM_BY_VALUE = Object.fromEntries(ZOOMS.map((z) => [z.value, z])) as Reco
   (typeof ZOOMS)[number]
 >
 
-/** Below this density a title would be wider than the time it describes. */
-const LABEL_MIN_PX_PER_DAY = 8
-const LABEL_MAX_W = 200
-/** Rough width of a 10px label, used to reserve room when packing rows. */
-const labelWidth = (title: string) => Math.min(LABEL_MAX_W, title.length * 5.4 + 8)
-
-interface Bar {
-  item: Task
-  x: number
-  w: number
-  y: number
-  /** 0 when the current zoom is too coarse to caption the bars. */
-  labelW: number
-}
-
 /** The schedule card on the Overview. It has no page of its own. */
 export function Timeline({ onOpenItem }: { onOpenItem: (t: DrawerTarget) => void }) {
   const { ds } = useStore()
@@ -81,6 +66,7 @@ export function Timeline({ onOpenItem }: { onOpenItem: (t: DrawerTarget) => void
   const [zoom, setZoom] = useState<Zoom>('season')
   const [assembly, setAssembly] = useState('')
   const [hideDone, setHideDone] = useState(false)
+  const [printing, setPrinting] = useState(false)
   const [hover, setHover] = useState<{ x: number; y: number; node: React.ReactNode } | null>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
 
@@ -145,66 +131,22 @@ export function Timeline({ onOpenItem }: { onOpenItem: (t: DrawerTarget) => void
   const xOf = (iso: string) =>
     range ? (daysBetween(range.from, parseDay(iso)!) / totalDays) * chartW : 0
 
-  // A milestone strip on top, then one lane per assembly. Bars inside a lane are
-  // packed onto rows that do not overlap, so a busy assembly grows in height
-  // rather than hiding work.
-  const lanes = useMemo(() => {
-    if (!range) return []
-    const visible = (iso: string) => {
-      const d = parseDay(iso)
-      return !!d && d >= range.from && d <= range.to
-    }
-    const inWindow = {
-      tasks: dated.tasks.filter((t) => visible(t.due) || visible(t.start || t.due)),
-      milestones: dated.milestones.filter((m) => visible(m.due)),
-    }
-    const names = [...new Set(inWindow.tasks.map((t) => groupOf(ds, t) || 'Unassigned'))]
-    const work = names
-      .map((name) => {
-        const tasks = inWindow.tasks.filter((t) => (groupOf(ds, t) || 'Unassigned') === name)
-        const milestones: typeof inWindow.milestones = []
-        const rows: { end: number }[] = []
-        const bars: Bar[] = []
-        for (const t of [...tasks].sort((a, b) => (a.start || a.due).localeCompare(b.start || b.due))) {
-          const startIso = t.start || t.due
-          const x = xOf(startIso)
-          const w = Math.max(6, xOf(t.due) - x)
-          // Most tasks on the sheet carry only a due date, so their bars are the
-          // 6px minimum. The caption therefore sits beside the bar, and the row
-          // packing reserves its width so captions never overlap the next bar.
-          const labelW = showLabels ? labelWidth(t.title) : 0
-          const end = x + w + (labelW ? labelW + 8 : 6)
-          let row = rows.findIndex((r) => r.end < x)
-          if (row === -1) {
-            rows.push({ end })
-            row = rows.length - 1
-          } else rows[row].end = end
-          bars.push({ item: t, x, w, y: row * ROW_H, labelW })
-        }
-        return {
-          name,
-          bars,
-          milestones,
-          height: Math.max(
-            MIN_LANE_H,
-            MS_STRIP + Math.max(1, rows.length) * ROW_H + LANE_PAD,
-          ),
-        }
-      })
-      .sort((a, b) => b.bars.length - a.bars.length)
-    return inWindow.milestones.length
-      ? [
-          {
-            name: MS_LANE,
-            bars: [] as Bar[],
-            milestones: inWindow.milestones,
-            height: MIN_LANE_H,
-          },
-          ...work,
-        ]
-      : work
+  const lanes = useMemo(
+    () =>
+      range
+        ? buildLanes({
+            tasks: dated.tasks,
+            milestones: dated.milestones,
+            range,
+            chartW,
+            totalDays,
+            showLabels,
+            groupOf: (t) => groupOf(ds, t),
+          })
+        : [],
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dated, chartW, range?.from, range?.to, totalDays, showLabels])
+    [dated, ds, chartW, range?.from, range?.to, totalDays, showLabels],
+  )
 
   /**
    * Pinch (which a trackpad reports as ctrl+wheel) and ctrl/⌘+wheel step through
@@ -342,6 +284,9 @@ export function Timeline({ onOpenItem }: { onOpenItem: (t: DrawerTarget) => void
         }}
       >
         Today
+      </Button>
+      <Button onClick={() => setPrinting(true)} title="Open a large, printable version">
+        Print
       </Button>
     </div>
   )
@@ -553,6 +498,15 @@ export function Timeline({ onOpenItem }: { onOpenItem: (t: DrawerTarget) => void
           </span>
         </div>
       </Card>
+
+      {printing && (
+        <TimelinePrint
+          tasks={dated.tasks}
+          milestones={dated.milestones}
+          range={range}
+          onClose={() => setPrinting(false)}
+        />
+      )}
 
       {hover && (
         <ChartTooltip x={hover.x} y={hover.y}>
