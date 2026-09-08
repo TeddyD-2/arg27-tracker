@@ -41,8 +41,18 @@ the sheet's own column names, and shareable URLs (`#/tasks/AU_A05_T005`).
 
 ## How the data works
 
-`scripts/build-seed.py` reads the workbook once and writes `src/data/seed.json`.
-Re-run it whenever the sheet changes:
+**Export → Import .xlsx…** reads a new workbook in the browser and swaps the
+data in place, so a refreshed sheet does not need a checkout or a Python run.
+It parses first and reports what it found — subteams, goals, milestones, tasks —
+before asking to replace, since the swap discards local edits.
+
+`src/lib/importXlsx.ts` is a port of the script below and has to stay in step
+with it: both must apply the same normalisation or a re-import would silently
+change the data. They are verified against each other by importing the same
+workbook and diffing every field against `seed.json`.
+
+`scripts/build-seed.py` still generates the committed `src/data/seed.json`, and
+is the right route when the app is being rebuilt anyway:
 
 ```bash
 pip install openpyxl

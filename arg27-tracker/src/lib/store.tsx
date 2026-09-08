@@ -81,9 +81,7 @@ export function nextId(
   assemblyCode = 'A01',
 ): string {
   const prefix =
-    kind === 'task'
-      ? `${code}_${assemblyCode}_T`
-      : `${code}${kind === 'milestone' ? '_M' : '_G'}`
+    kind === 'task' ? `${code}_${assemblyCode}_T` : `${code}${kind === 'milestone' ? '_M' : '_G'}`
   const list: { id: string }[] =
     kind === 'task' ? ds.tasks : kind === 'milestone' ? ds.milestones : ds.goals
   const re = new RegExp(`^${prefix}(\\d{3})`)
@@ -149,6 +147,8 @@ interface StoreValue {
   createGoal: (draft: Partial<Goal>) => Goal
   remove: (kind: 'task' | 'milestone' | 'goal', id: string) => void
   resetToSource: () => void
+  /** Swap in a freshly imported workbook, discarding every local edit. */
+  replaceDataset: (next: Omit<Dataset, 'log' | 'groupBy' | 'groups'>) => void
   undo: () => void
   canUndo: boolean
   /** Set when a write just happened, so views can flash the changed row. */
@@ -341,6 +341,22 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         commit(next)
       },
       resetToSource: () => commit(freshDataset()),
+      replaceDataset: (next) => {
+        const fresh = { ...next, log: [], groupBy: 'assembly', groups: [] } as Dataset
+        commit(fresh)
+        // The selected subteam may not exist in the new workbook.
+        if (!fresh.subteams.some((s) => s.name === subteam) && subteam !== ALL_TEAMS) {
+          const first = fresh.subteams[0]?.name
+          if (first) {
+            setSubteamState(first)
+            try {
+              localStorage.setItem(SUBTEAM_KEY, first)
+            } catch {
+              /* private mode */
+            }
+          }
+        }
+      },
       undo: () => {
         const prev = history.current.pop()
         if (!prev) return
