@@ -91,9 +91,12 @@ const RATIOS: {
   },
 ]
 
-type Format = 'png2' | 'png3' | 'png4' | 'png6' | 'png8' | 'svg'
+type Format = 'png05' | 'png1' | 'png15' | 'png2' | 'png3' | 'png4' | 'png6' | 'png8' | 'svg'
 
 const FORMATS: { value: Format; note: string; scale: number }[] = [
+  { value: 'png05', note: 'thumbnail', scale: 0.5 },
+  { value: 'png1', note: 'small file', scale: 1 },
+  { value: 'png15', note: '1080p slide', scale: 1.5 },
   { value: 'png2', note: 'screen', scale: 2 },
   { value: 'png3', note: 'print', scale: 3 },
   { value: 'png4', note: 'large print', scale: 4 },
@@ -117,8 +120,9 @@ const MAX_SIDE = 16_000
 
 function fit(w: number, h: number, scale: number) {
   const capped = Math.min(scale, MAX_SIDE / w, MAX_SIDE / h, Math.sqrt(MAX_PIXELS / (w * h)))
-  // Round down to a sensible step so the label never reads "3.87x".
-  const usable = Math.max(1, Math.floor(capped * 10) / 10)
+  // Round down to a sensible step so the label never reads "3.87x". The floor
+  // is well below 1 so the deliberately small multiples are not clamped up.
+  const usable = Math.max(0.1, Math.floor(capped * 10) / 10)
   return { scale: usable, clamped: usable < scale - 0.05 }
 }
 
@@ -133,6 +137,26 @@ const INKS: { value: Ink; label: string }[] = [
 
 /** A calm categorical ramp for lanes — distinguishable, and legible on white. */
 const LANE_INK = ['#2f6fb5', '#0f8a6a', '#b3591b', '#7a4fb5', '#a8323f', '#3d7a2f', '#8a6d1f']
+
+/** Redraw a bitmap at an exact size, for the sub-1x exports. */
+async function resample(blob: Blob, w: number, h: number): Promise<Blob> {
+  const bmp = await createImageBitmap(blob)
+  const canvas = document.createElement('canvas')
+  canvas.width = w
+  canvas.height = h
+  const ctx = canvas.getContext('2d')
+  if (!ctx) return blob
+  ctx.imageSmoothingEnabled = true
+  ctx.imageSmoothingQuality = 'high'
+  ctx.drawImage(bmp, 0, 0, w, h)
+  bmp.close()
+  return new Promise((resolve, reject) =>
+    canvas.toBlob(
+      (out) => (out ? resolve(out) : reject(new Error('could not resample'))),
+      'image/png',
+    ),
+  )
+}
 
 export function TimelinePrint({
   tasks,
@@ -294,7 +318,15 @@ export function TimelinePrint({
         .filter((h) => h.includes('fonts.googleapis.com'))
       let css = ''
       for (const href of sheets) {
-        let text = await fetch(href).then((r) => r.text())
+        const full = await fetch(href).then((r) => r.text())
+        // Google serves a @font-face per unicode subset — latin, latin-ext,
+        // cyrillic, greek, vietnamese — which came to twenty woff2 files and a
+        // 3.8MB payload. Decoding that took longer than the render timeout, so
+        // every PNG export failed. The sheet is English, so keep basic latin.
+        let text = (full.match(/@font-face\s*\{[^}]*\}/g) ?? [full])
+          .filter((block) => block.includes('U+0000-00FF'))
+          .join('\n')
+        if (!text.trim()) text = full
         for (const url of [...text.matchAll(/url\((https:\/\/[^)]+)\)/g)].map((m) => m[1])) {
           const bytes = await fetch(url).then((r) => r.arrayBuffer())
           const buf = new Uint8Array(bytes as ArrayBuffer)
@@ -334,17 +366,23 @@ export function TimelinePrint({
       const opts = embedded
         ? { backgroundColor: '#ffffff', fontEmbedCSS: embedded }
         : { backgroundColor: '#ffffff', skipFonts: true }
+      // The renderer never settles when asked for a pixelRatio below 1, so the
+      // small sizes are rendered at 1x and resampled down here. That is the
+      // better route anyway: downsampling a larger bitmap beats rasterising
+      // straight to a tiny one.
       const render =
         spec.value === 'svg'
           ? toSvg(node, opts)
-          : toBlob(node, { ...opts, pixelRatio: out.scale }).then((b) => {
-              if (!b) throw new Error('the renderer produced nothing')
-              return URL.createObjectURL(b)
-            })
+          : toBlob(node, { ...opts, pixelRatio: Math.max(1, out.scale) })
+              .then((b) => {
+                if (!b) throw new Error('the renderer produced nothing')
+                return out.scale < 1 ? resample(b, out.w, out.h) : b
+              })
+              .then((b) => URL.createObjectURL(b))
       const href = await Promise.race([
         render,
         new Promise<never>((_, reject) =>
-          setTimeout(() => reject(new Error('rendering timed out')), 20_000),
+          setTimeout(() => reject(new Error('rendering timed out')), 45_000),
         ),
       ])
       const a = document.createElement('a')
@@ -432,10 +470,13 @@ export function TimelinePrint({
         </div>
       </div>
 
-      <div className="flex justify-center px-6 py-6">
+      <div className="flex justify-center overflow-auto px-6 py-6">
         <div
           ref={sheetRef}
-          className="tp-sheet overflow-hidden bg-white shadow-xl shadow-black/10"
+          // shrink-0 matters: as a flex item the sheet would otherwise be
+          // squeezed by a narrow window, and the export captured that squeezed
+          // width — a 16:9 sheet came out 450x720. Let the page scroll instead.
+          className="tp-sheet shrink-0 overflow-hidden bg-white shadow-xl shadow-black/10"
           style={{ width: shape.w, height: shape.h || undefined, padding: PAD }}
         >
           <header
