@@ -18,10 +18,32 @@ export const MS_LANE = 'Milestones'
 
 /** Below this density a title would be wider than the time it describes. */
 export const LABEL_MIN_PX_PER_DAY = 8
-/** Rough label width, used to reserve room when packing rows. The print sheet
- *  sets a bigger type size, so it passes its own numbers. */
+/** Fallback label width when text cannot be measured (no canvas). */
 export const labelWidth = (title: string, charW = 5.4, max = 200) =>
   Math.min(max, title.length * charW + 8)
+
+/**
+ * Real text metrics for the font the captions are actually set in.
+ *
+ * Estimating width as characters x a constant was never going to hold: the
+ * estimate was also capped, so a long title reserved 280px and then rendered
+ * 354px wide, running straight over its neighbour. Measuring removes the guess,
+ * and with no cap the packer waterfalls a long title onto its own row instead.
+ */
+export function textMeasurer(font: string): (title: string) => number {
+  const ctx = document.createElement('canvas').getContext('2d')
+  if (!ctx) return (title) => labelWidth(title)
+  ctx.font = font
+  const cache = new Map<string, number>()
+  return (title) => {
+    let w = cache.get(title)
+    if (w === undefined) {
+      w = ctx.measureText(title).width
+      cache.set(title, w)
+    }
+    return w
+  }
+}
 
 export interface Bar {
   item: Task
@@ -67,6 +89,9 @@ export interface LaneInput {
   /** Caption metrics, so a larger type size still reserves enough room. */
   charW?: number
   maxLabelW?: number
+  /** Measures a caption in the font it will be drawn in. Preferred over the
+   *  charW estimate — see textMeasurer. */
+  measure?: (title: string) => number
 }
 
 export function buildLanes({
@@ -80,6 +105,7 @@ export function buildLanes({
   rowH = ROW_H,
   charW,
   maxLabelW,
+  measure,
 }: LaneInput): Lane[] {
   const xOf = (iso: string) => (daysBetween(range.from, parseDay(iso)!) / totalDays) * chartW
   const visible = (iso: string) => {
@@ -105,7 +131,11 @@ export function buildLanes({
         // Most tasks on the sheet carry only a due date, so their bars are the
         // 6px minimum. The caption therefore sits beside the bar, and the row
         // packing reserves its width so captions never overlap the next bar.
-        const labelW = showLabels ? labelWidth(t.title, charW, maxLabelW) : 0
+        const labelW = !showLabels
+          ? 0
+          : measure
+            ? measure(t.title) + 4
+            : labelWidth(t.title, charW, maxLabelW)
         const { flip, left, right } = span(x, w, labelW, chartW)
         let row = rows.findIndex((r) => r.end <= left)
         if (row === -1) {

@@ -21,7 +21,7 @@ import {
   type Priority,
   type Task,
 } from '../lib/types'
-import { buildLanes, labelWidth, MS_LANE, MS_STRIP, span } from '../lib/lanes'
+import { buildLanes, MS_LANE, MS_STRIP, span, textMeasurer } from '../lib/lanes'
 import { Button, Select } from './ui'
 import { IconClose } from './icons'
 
@@ -38,10 +38,11 @@ const LABEL_W = 190
 const ROW_H = 30
 const LANE_MIN = 68
 
-/** Roughly the advance width of the 14px medium caption face. Kept in step
- *  with the type below — undersize it and the packer reserves too little room,
- *  and the captions start colliding again. */
-const CHAR_W = 7.7
+/** The stack from index.css, so measurement matches what is drawn. */
+const FACE = `'Proxima Nova', 'proxima-nova', Mulish, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif`
+/** Captions are 14px/500; milestone titles 15px/700. */
+const measureTask = textMeasurer(`500 14px ${FACE}`)
+const measureMilestone = textMeasurer(`700 15px ${FACE}`)
 
 type Ratio = 'letter' | 'slide169' | 'slide43' | 'portrait'
 
@@ -206,9 +207,9 @@ export function TimelinePrint({
         showLabels: true,
         groupOf: (t) => groupOf(ds, t),
         rowH: ROW_H,
-        // 13px captions here, against 10px on the card.
-        charW: CHAR_W,
-        maxLabelW: 280,
+        // Measured, not estimated, and deliberately uncapped: a long title
+        // takes the width it takes and the packer drops it to its own row.
+        measure: measureTask,
       }),
     [tasks, milestones, range, chartW, totalDays, ds],
   )
@@ -230,7 +231,7 @@ export function TimelinePrint({
       .sort((a, b) => a.due.localeCompare(b.due))
       .map((m) => {
         const x = xOf(m.due) - 6
-        const labelW = labelWidth(m.title, CHAR_W * 1.12, 320)
+        const labelW = measureMilestone(m.title) + 4
         // The diamond is 12px wide; the caption sits beside it.
         const { flip, left, right } = span(x, 12, labelW, chartW, 6)
         let row = ends.findIndex((end) => end <= left)
@@ -622,7 +623,7 @@ export function TimelinePrint({
                               background: ink === 'mono' ? '#14171c' : STATUS_COLOR[statusOf(m)],
                             }}
                           />
-                          <span className="text-[15px] font-bold whitespace-nowrap text-[#14171c]">
+                          <span className="overflow-hidden text-[15px] font-bold text-ellipsis whitespace-nowrap text-[#14171c]">
                             {m.title}
                           </span>
                         </div>
