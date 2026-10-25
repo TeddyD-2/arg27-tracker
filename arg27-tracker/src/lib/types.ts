@@ -129,6 +129,8 @@ export interface Milestone {
 export interface Task {
   id: string
   subteam: string
+  /** The workbook's own ID, kept when a merged assembly renumbers the task. */
+  sheetId?: string
   title: string
   assembly: string
   /** `A06` — the assembly's code, kept so IDs and chips agree with the sheet. */

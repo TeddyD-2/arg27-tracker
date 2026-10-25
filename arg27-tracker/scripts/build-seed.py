@@ -51,6 +51,20 @@ PRIORITY_MAP = {
 
 ID_RE = re.compile(r"^[A-Z]{2}(_[A-Z]?\d+)*_?[A-Z]?\d{3}$")
 
+# Assemblies the team has since combined into one role. The workbook still
+# lists them apart -- it is edited by hand all season, and renaming a
+# `Part Design` block there would orphan every ID under it -- so the fold
+# happens on the way in. `src/lib/merges.ts` carries the same list for the
+# in-app importer; the two must stay in step or a re-import would silently
+# change the data.
+ASSEMBLY_MERGES = [
+    {
+        "subteam": "Autonomy",
+        "from": ["A05"],
+        "into": {"code": "A04", "name": "Sensors, Harnessing, and Compute"},
+    },
+]
+
 
 def cell(v):
     if v is None:
@@ -120,6 +134,55 @@ def month_ceil(day):
     y, m = int(day[:4]), int(day[5:7])
     y, m = (y + 1, 1) if m == 12 else (y, m + 1)
     return "%04d-%02d-01" % (y, m)
+
+
+def apply_assembly_merges(subteams, assemblies, tasks, milestones):
+    """Fold the merged assemblies together, in place.
+
+    Tasks moving across keep their place in sheet order and are renumbered
+    into the surviving assembly's sequence -- `AU_A05_T003` becomes
+    `AU_A04_T005` -- because the ID carries the assembly code everywhere the
+    app shows it. The workbook's own ID stays on the task as `sheetId`, and
+    references to it from other tasks and milestones follow the renumber.
+
+    Run before IDs are deduplicated, so a renumber that lands on an ID the
+    sheet already used is caught by that pass like any other collision."""
+    for merge in ASSEMBLY_MERGES:
+        sub = next((s for s in subteams if s["name"] == merge["subteam"]), None)
+        if not sub:
+            continue
+        into = merge["into"]
+        codes = set([into["code"]] + merge["from"])
+
+        # One assembly where there were several, in the position of the first.
+        kept, keep = False, []
+        for a in assemblies:
+            if a["subteam"] != merge["subteam"] or a["code"] not in codes:
+                keep.append(a)
+                continue
+            if kept:
+                continue
+            kept = True
+            a["code"], a["name"] = into["code"], into["name"]
+            keep.append(a)
+        assemblies[:] = keep
+
+        renamed = {}
+        moved = [t for t in tasks
+                 if t["subteam"] == merge["subteam"] and t["assemblyCode"] in codes]
+        for i, t in enumerate(moved, 1):
+            t["assembly"], t["assemblyCode"] = into["name"], into["code"]
+            new = "%s_%s_T%03d" % (sub["code"], into["code"], i)
+            if new != t["id"]:
+                if t["id"]:
+                    renamed[t["id"]] = new
+                    t.setdefault("sheetId", t["id"])
+                t["id"] = new
+
+        if not renamed:
+            continue
+        for it in tasks + milestones:
+            it["dependsOn"] = [renamed.get(x, x) for x in it["dependsOn"]]
 
 
 def main():
@@ -225,6 +288,11 @@ def main():
                     "notes": r.get("Notes", ""),
                 }
             )
+
+    # Assemblies the team has since combined into one role; the sheet still
+    # lists them apart. Folded before the duplicate pass, so a renumbered ID
+    # that collides is handled there like any other.
+    apply_assembly_merges(subteams, assemblies, tasks, milestones)
 
     # The sheet reuses auto-generated IDs here and there. Keep such rows
     # distinguishable in the app, with a breadcrumb back to the original.
