@@ -244,12 +244,7 @@
   {
    "subteam": "Autonomy",
    "code": "A04",
-   "name": "Sensors and Harnessing"
-  },
-  {
-   "subteam": "Autonomy",
-   "code": "A05",
-   "name": "Compute and Hardware"
+   "name": "Sensors, Harnessing, and Compute"
   },
   {
    "subteam": "Autonomy",
@@ -3313,7 +3308,7 @@
    "id": "AU_A04_T001",
    "subteam": "Autonomy",
    "title": "Camera choice",
-   "assembly": "Sensors and Harnessing",
+   "assembly": "Sensors, Harnessing, and Compute",
    "assemblyCode": "A04",
    "start": "",
    "due": "",
@@ -3331,7 +3326,7 @@
    "id": "AU_A04_T002",
    "subteam": "Autonomy",
    "title": "LiDAR choice",
-   "assembly": "Sensors and Harnessing",
+   "assembly": "Sensors, Harnessing, and Compute",
    "assemblyCode": "A04",
    "start": "",
    "due": "",
@@ -3346,11 +3341,11 @@
    "notes": ""
   },
   {
-   "id": "AU_A05_T001",
+   "id": "AU_A04_T003",
    "subteam": "Autonomy",
    "title": "Compute module choice",
-   "assembly": "Compute and Hardware",
-   "assemblyCode": "A05",
+   "assembly": "Sensors, Harnessing, and Compute",
+   "assemblyCode": "A04",
    "start": "",
    "due": "2026-08-31",
    "status": "Complete",
@@ -3364,11 +3359,11 @@
    "notes": ""
   },
   {
-   "id": "AU_A05_T002",
+   "id": "AU_A04_T004",
    "subteam": "Autonomy",
    "title": "Figure out what PCBs will be needed for safety compliance autonomy integration to ARG26",
-   "assembly": "Compute and Hardware",
-   "assemblyCode": "A05",
+   "assembly": "Sensors, Harnessing, and Compute",
+   "assemblyCode": "A04",
    "start": "",
    "due": "2026-08-28",
    "status": "Complete",
@@ -3382,11 +3377,11 @@
    "notes": ""
   },
   {
-   "id": "AU_A05_T003",
+   "id": "AU_A04_T005",
    "subteam": "Autonomy",
    "title": "Place order for DCU",
-   "assembly": "Compute and Hardware",
-   "assemblyCode": "A05",
+   "assembly": "Sensors, Harnessing, and Compute",
+   "assemblyCode": "A04",
    "start": "",
    "due": "2026-09-18",
    "status": "Not Started",
@@ -3400,11 +3395,11 @@
    "notes": ""
   },
   {
-   "id": "AU_A05_T004",
+   "id": "AU_A04_T006",
    "subteam": "Autonomy",
    "title": "Bring up and test DCU",
-   "assembly": "Compute and Hardware",
-   "assemblyCode": "A05",
+   "assembly": "Sensors, Harnessing, and Compute",
+   "assemblyCode": "A04",
    "start": "",
    "due": "2026-10-09",
    "status": "Not Started",
@@ -3414,17 +3409,17 @@
    ],
    "priority": "Medium",
    "dependsOn": [
-    "AU_A05_T003"
+    "AU_A04_T005"
    ],
    "deliverable": "",
    "notes": ""
   },
   {
-   "id": "AU_A05_T005",
+   "id": "AU_A04_T007",
    "subteam": "Autonomy",
    "title": "Order RAM, storage, CAN PCIe card",
-   "assembly": "Compute and Hardware",
-   "assemblyCode": "A05",
+   "assembly": "Sensors, Harnessing, and Compute",
+   "assemblyCode": "A04",
    "start": "",
    "due": "2026-09-07",
    "status": "Not Started",
@@ -3434,7 +3429,7 @@
    ],
    "priority": "Critical",
    "dependsOn": [
-    "AU_A05_T001"
+    "AU_A04_T003"
    ],
    "deliverable": "",
    "notes": ""
