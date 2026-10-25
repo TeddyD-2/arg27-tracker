@@ -22,6 +22,7 @@ import {
   type Task,
 } from '../lib/types'
 import { buildLanes, MS_LANE, MS_STRIP, span, textMeasurer } from '../lib/lanes'
+import { useLaneOrder } from '../lib/laneOrder'
 import { Button, Select } from './ui'
 import { IconClose } from './icons'
 
@@ -171,6 +172,8 @@ export function TimelinePrint({
   onClose: () => void
 }) {
   const { ds, subteam, isAllTeams } = useStore()
+  // The sheet is the card at a larger scale, lane order included.
+  const { order } = useLaneOrder(subteam)
   const [ink, setInk] = useState<Ink>('status')
   const [ratio, setRatio] = useState<Ratio>('letter')
   const [format, setFormat] = useState<Format>('png2')
@@ -206,12 +209,13 @@ export function TimelinePrint({
         totalDays,
         showLabels: true,
         groupOf: (t) => groupOf(ds, t),
+        order,
         rowH: ROW_H,
         // Measured, not estimated, and deliberately uncapped: a long title
         // takes the width it takes and the packer drops it to its own row.
         measure: measureTask,
       }),
-    [tasks, milestones, range, chartW, totalDays, ds],
+    [tasks, milestones, range, chartW, totalDays, ds, order],
   )
 
   /**

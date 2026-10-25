@@ -21,8 +21,10 @@ import {
   type Task,
 } from '../lib/types'
 import { Button, Card, ChartTooltip, cx, EmptyState, Select, StatusChip } from '../components/ui'
+import { IconChevron } from '../components/icons'
 import type { DrawerTarget } from '../components/ItemDrawer'
 import { buildLanes, LABEL_MIN_PX_PER_DAY, MS_LANE, MS_STRIP, ROW_H } from '../lib/lanes'
+import { useLaneOrder } from '../lib/laneOrder'
 import { TimelinePrint } from '../components/TimelinePrint'
 
 const LABEL_W = 168
@@ -54,7 +56,8 @@ const ZOOM_BY_VALUE = Object.fromEntries(ZOOMS.map((z) => [z.value, z])) as Reco
 
 /** The schedule card on the Overview. It has no page of its own. */
 export function Timeline({ onOpenItem }: { onOpenItem: (t: DrawerTarget) => void }) {
-  const { ds } = useStore()
+  const { ds, subteam } = useStore()
+  const laneOrder = useLaneOrder(subteam)
   const now = today()
   const [zoom, setZoom] = useState<Zoom>('season')
   const [assembly, setAssembly] = useState('')
@@ -139,10 +142,11 @@ export function Timeline({ onOpenItem }: { onOpenItem: (t: DrawerTarget) => void
             totalDays,
             showLabels,
             groupOf: (t) => groupOf(ds, t),
+            order: laneOrder.order,
           })
         : [],
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [dated, ds, chartW, range?.from, range?.to, totalDays, showLabels],
+    [dated, ds, chartW, range?.from, range?.to, totalDays, showLabels, laneOrder.order],
   )
 
   /**
@@ -295,6 +299,15 @@ export function Timeline({ onOpenItem }: { onOpenItem: (t: DrawerTarget) => void
       <Button onClick={() => setPrinting(true)} title="Open a large, printable version">
         Print
       </Button>
+      {laneOrder.custom && (
+        <Button
+          variant="subtle"
+          onClick={laneOrder.reset}
+          title="Sort the lanes by how much work they carry again"
+        >
+          Reset order
+        </Button>
+      )}
     </div>
   )
 
@@ -324,12 +337,12 @@ export function Timeline({ onOpenItem }: { onOpenItem: (t: DrawerTarget) => void
             {lanes.map((lane) => (
               <div
                 key={lane.name}
-                className="flex items-start border-b border-hairline px-3 pt-1.5"
+                className="group flex items-start gap-1 border-b border-hairline px-3 pt-1.5"
                 style={{ height: lane.height }}
               >
                 {/* Plain text, not a chip — a boxed label inside a boxed lane
                     inside a boxed card reads as noise, and the name gets clipped. */}
-                <div className="min-w-0">
+                <div className="min-w-0 flex-1">
                   <div className="tnum text-[10px] text-muted">
                     {lane.name === MS_LANE
                       ? `${lane.milestones.length} deadlines`
@@ -339,6 +352,14 @@ export function Timeline({ onOpenItem }: { onOpenItem: (t: DrawerTarget) => void
                     {lane.name}
                   </div>
                 </div>
+                {/* The deadline strip is not one of the work lanes, so it has
+                    nowhere to move to and keeps the top. */}
+                {lane.name !== MS_LANE && (
+                  <div className="flex shrink-0 flex-col opacity-0 transition-opacity group-hover:opacity-100 focus-within:opacity-100">
+                    <Nudge lane={lane.name} dir={-1} />
+                    <Nudge lane={lane.name} dir={1} />
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -541,6 +562,29 @@ export function Timeline({ onOpenItem }: { onOpenItem: (t: DrawerTarget) => void
       )}
     </div>
   )
+
+  /**
+   * One nudge of a lane's place in the chart. Hidden until the lane is
+   * hovered or the button is tabbed to, so thirteen lanes do not come with
+   * twenty-six arrows on screen at rest.
+   */
+  function Nudge({ lane, dir }: { lane: string; dir: -1 | 1 }) {
+    const names = lanes.filter((l) => l.name !== MS_LANE).map((l) => l.name)
+    const at = names.indexOf(lane)
+    const end = dir === -1 ? at <= 0 : at === names.length - 1
+    return (
+      <button
+        type="button"
+        disabled={end}
+        onClick={() => laneOrder.move(names, lane, dir)}
+        className="flex size-4 items-center justify-center rounded text-muted transition-colors hover:bg-surface-2 hover:text-ink disabled:opacity-20 disabled:hover:bg-transparent"
+        title={`Move ${lane} ${dir === -1 ? 'up' : 'down'}`}
+        aria-label={`Move ${lane} ${dir === -1 ? 'up' : 'down'}`}
+      >
+        <IconChevron className={cx('size-3', dir === -1 ? '-rotate-90' : 'rotate-90')} />
+      </button>
+    )
+  }
 
   function BarTip({ item }: { item: Task }) {
     return (

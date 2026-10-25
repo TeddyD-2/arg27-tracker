@@ -84,6 +84,9 @@ export interface LaneInput {
   showLabels: boolean
   /** The lane a task belongs to — its assembly, or its subteam across the program. */
   groupOf: (t: Task) => string
+  /** Hand-picked lane order, most-wanted first. Lanes it does not name keep
+   *  their largest-first place after the ones it does. */
+  order?: string[]
   /** Row height, so the print sheet can give each bar more air. */
   rowH?: number
   /** Caption metrics, so a larger type size still reserves enough room. */
@@ -102,6 +105,7 @@ export function buildLanes({
   totalDays,
   showLabels,
   groupOf,
+  order,
   rowH = ROW_H,
   charW,
   maxLabelW,
@@ -152,6 +156,16 @@ export function buildLanes({
       }
     })
     .sort((a, b) => b.bars.length - a.bars.length)
+
+  // A hand-picked order wins over size, for the lanes it names. Sorting is
+  // stable, so the rest stay largest-first underneath them.
+  if (order?.length) {
+    const rank = (name: string) => {
+      const i = order.indexOf(name)
+      return i === -1 ? Number.MAX_SAFE_INTEGER : i
+    }
+    work.sort((a, b) => rank(a.name) - rank(b.name))
+  }
 
   return inWindow.milestones.length
     ? [
